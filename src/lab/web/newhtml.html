@@ -1,0 +1,167 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style type="text/css">
+            .cols{
+                text-align: center;
+                vertical-align: middle;
+                z-index: 2;
+            }
+        </style>
+        <script type="text/javascript" src="scripts/jquery.js"></script>
+        <script type="text/javascript" src="scripts/jquery-ui.js"></script>
+        <script type="text/javascript">
+            var valid=false;
+            $(document).ready(function(){
+                
+                    startTime();
+               
+               
+               
+            });
+            function startTime()
+            {
+                //alert("coming");
+                   
+                   var end=new Date(2012,01,04,11,58,00,00);
+                   //end=end.getUTCDate();
+                   showTime(end,valid);
+            }
+            function showTime(end,valid)
+            {
+                //alert("coming");
+                var cur=new Date();
+               // cur=cur.getUTCDate();
+                //alert(end+" "+cur);
+                var lax=end-cur;
+                   if(lax>0){
+                       var day=checkOut(parseInt(lax/(1000*24*60*60)));
+                       //alert(day);
+                       lax=lax%(1000*24*60*60);
+                       var hr=checkOut(parseInt(lax/(1000*60*60)));
+                       lax=lax%(1000*60*60);
+                       var min=checkOut(parseInt(lax/(1000*60)));
+                       lax=lax%(1000*60);
+                       var sec=checkOut(parseInt(lax/(1000)));
+                       lax=lax%(1000);
+//                       var sec=(lax/1000);
+//                       var min=sec/60;
+//                       alert(lax+"   "+sec);
+//                       var hr=min/60;
+//                       var day=hr/24;
+                        $("#td1").html(day);
+                        $("#td2").html(hr);
+                        $("#td3").html(min);
+                        $("#td4").html(sec);
+                        if(valid){
+                        $("#td11").html(":");
+                        $("#td12").html(":");
+                        $("#td13").html(":");
+                        valid=false;
+                        }
+                        else
+                            {
+                        $("#td11").html(" &nbsp;");
+                        $("#td12").html("&nbsp; ");
+                        $("#td13").html("&nbsp; ");
+                        valid=true;
+                        
+                        }
+                        $("#displaycount").html("Current : "+cur+"<br>End : "+end);
+                        
+                       //$("#displaycount").html(day+" : "+hr+" : "+min+" : "+sec);
+                       setTimeout(showTime, 500,  end,valid);
+                   }
+                   else{
+                       endTime();
+                   }
+                   
+                   
+            }
+            function checkOut(val)
+            {
+                if(val<10)
+                    {
+                        val="0"+val;
+                    }
+                    return val;
+            }
+            function endTime()
+            {
+                   $("#td1").html("00");
+                        $("#td2").html("00");
+                        $("#td3").html("00");
+                        $("#td4").html("00");
+            }
+        </script>
+
+    </head>
+    <body>
+        <div id="displaycount" > </div>
+        <div id="displaycount1" style="border: solid 1px black;
+             background :#00ff00;
+            width: 30%;
+             border-radius: 10px;
+                -moz-border-radius: 10px;
+                -webkit-border-radius: 10px;">
+            <table id="tabsd" cellpadding="3" cellspacing="3" >
+                <tr>
+                    <td id="td1" class="cols">
+                        
+                    </td>
+                    <td id="td11" class="cols">
+                        :
+                    </td>
+                    <td id="td2" class="cols">
+                        
+                    </td>
+                    <td id="td12" class="cols">
+                        :
+                    </td>
+                    <td id="td3" class="cols">
+                        
+                    </td>
+                    <td id="td13" class="cols">
+                        :
+                    </td>
+                    <td id="td4" class="cols">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td  class="cols">
+                        Days
+                    </td>
+                    <td class="cols">
+                        
+                    </td>
+                    <td class="cols">
+                        Hours
+                    </td>
+                    <td class="cols">
+                        
+                    </td>
+                    <td  class="cols">
+                        Minutes
+                    </td>
+                    <td class="cols">
+                        
+                    </td>
+                    <td class="cols">
+                        Seconds
+                    </td>
+                </tr>
+                
+            </table>
+            
+            </div>
+            
+       
+    </body>
+</html>

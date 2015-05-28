@@ -1,0 +1,294 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.--><!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit --><!DOCTYPE html>
+<html><head></head><body>
+<div id="experiment"> <!-- The Experiment Document Container-->
+<!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+<header class="default" id="experiment-header">
+<div class="logo" id="experiment-header-logo">
+<!-- Enclose the logo image of your lab or write it in 
+      text-->
+<img src="../images/logo.jpg"/>
+</div>
+<div class="heading" id="experiment-header-heading">
+<!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+<a href="../index.html">FPGA & Embedded Systems Lab</a>
+</div>
+<!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+</header>
+<!-- The lab article is the main content area where all the 
+  experiment content sits-->
+<article id="experiment-article">
+<!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+<div class="breadcrumb" id="experiment-article-breadcrumb">
+</div>
+<header class="heading" id="experiment-article-heading">Linear Equation Solver</header>
+<!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+<nav class="default" id="experiment-article-navigation">
+<ul id="experiment-article-navigation-menu">
+<!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          &lt;li&gt; tag as shown below-->
+</ul>
+</nav>
+<!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+<div id="experiment-article-sections">
+<!-- First section of the article-->
+<section id="experiment-article-section-1">
+<div class="icon" id="experiment-article-section-1-icon">
+<!-- Enclose the icon image of your lab -->
+<img src="../images/introduction.jpg"/>
+</div>
+<!-- The heading for the section can be enclosed in a 
+          div tag. -->
+<div class="heading" id="experiment-article-section-1-heading">
+            Aim
+          </div>
+<!-- Write the section content inside a paragraph 
+          element, You can also include images with &lt;img&gt; tag -->
+<div class="content" id="experiment-article-section-1-content"><div class="divContent"><h2 style="color: Red;"><strong><u><span style="font-family: arial,helvetica,sans-serif; color: rgb(255, 0, 0);"><span style="font-size: large;"></span></span></u></strong></h2>
+ <p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);"><strong style="font-size: large; color:black;">Aim : </strong> To solve a system of linear equations using Gaussian Elimination method.</p>
+<p class="MsoNormal" style="line-height: 150%; text-align: right;"><a href="http://coep.vlab.co.in/?sub=33&amp;brch=91"><span style="font-family: arial,helvetica,sans-serif; font-size: medium;"></span></a></p>
+
+<p><span style="font-family: arial,helvetica,sans-serif; color: rgb(0, 0, 0);"><strong><span style="font-size: large;">Pre-Requisites:-</span></strong></span></p>
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">Before performing the experiment the user should know:</span></p>
+<p><!-- p { margin-bottom: 0.21cm; } --></p>
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">         1. Knowledge of digital fundamentals.</span></p>
+
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">         2. Fundamentals of Verilog syntax.</span></p>
+
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">         3. Knowledge  of different methods used for solving linear equations</span></p>
+
+<p><span style="font-family: arial,helvetica,sans-serif; color: rgb(0, 0, 0);"><strong><span style="font-size: large;">Objectives:-</span></strong></span></p>
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">After performing the experiment the students will learn:</span></p>
+
+<p><!-- p { margin-bottom: 0.21cm; } --></p>
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">         1. Diffrent conputational methodes used for linear solvers and their computational complexities</span></p>
+
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">         2. Gauss Jordan Elimination method and its FPGA implementation.</span></p>
+
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">         3. Forward and backward substitution algorithm and its FPGA implementation.</span></p>
+
+<p><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(0, 0, 0);"><br/>
+</span></p></div></div>
+</section>
+<!-- Second section of the article-->
+<section id="experiment-article-section-2">
+<div class="icon" id="experiment-article-section-2-icon">
+<!-- Enclose the icon image of your lab. -->
+<img src="images/content_94.png"/>
+</div>
+<!-- The heading for the section can be enclosed in a 
+        div tag. -->
+<div class="heading" id="experiment-article-section-2-heading">
+          Pre Test
+        </div>
+<!-- Write the section content inside a paragraph 
+        element, we can also include images with &lt;img&gt; tag -->
+<div class="content" id="experiment-article-section-2-content"><div class="divQuiz"><div id="displayQuiz"><form id="form11" method="post" name="form11"><table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">1)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">When the inverse is not required, Gaussian Elimination method is _________ times slower than other methods.</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans5998" name="ans0" type="radio" value="5998"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans5998">Two</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans5999" name="ans0" type="radio" value="5999"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans5999">Ten</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6000" name="ans0" type="radio" value="6000"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6000">Three</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6001" name="ans0" type="radio" value="6001"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6001">None of the above</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint10" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">2)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">	Partial Pivoting is ______________ full pivoting because we don't have to keep a track of permutation of solution vector.	</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6002" name="ans1" type="radio" value="6002"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6002">Easier than</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6003" name="ans1" type="radio" value="6003"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6003">Tougher than</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6004" name="ans1" type="radio" value="6004"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6004">Same as</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6005" name="ans1" type="radio" value="6005"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6005">None of the above</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint11" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">3)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">Arrange the steps to solve the Gaussian Elimination using pivoting in proper order: a) Use back-subsititution to solve for the unknowns. b) Choose the pivot row. c) Enter the augmented matrix. d) Swap the pivot row with the first row.</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6006" name="ans2" type="radio" value="6006"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6006">bcda</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6007" name="ans2" type="radio" value="6007"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6007">cbda</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6008" name="ans2" type="radio" value="6008"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6008">abcd</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6009" name="ans2" type="radio" value="6009"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6009">dcba</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint12" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">4)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">	The advantages of Gaussian Elimination are:</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6037" name="ans3" type="radio" value="6037"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6037">Stable.</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6036" name="ans3" type="radio" value="6036"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6036">Easy to understand.</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6035" name="ans3" type="radio" value="6035"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6035">Straight-forward.</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6034" name="ans3" type="radio" value="6034"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6034">All of the above.</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint13" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">5)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">The different methods used to solve a system of linear equations are:</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6038" name="ans3" type="radio" value="6038"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6038">Cholesky Decomposition</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6039" name="ans3" type="radio" value="6039"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6039">QR Decomposition</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6040" name="ans3" type="radio" value="6040"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6040">Gaussian Elimination</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6041" name="ans3" type="radio" value="6041"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6041">All of the above</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint13" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+
+
+<input align="middle" id="loadTime" name="loadTime" type="hidden" value="1379688870/"/><br/><div style="padding-left:40px;"><input id="submit1" name="submit1" onclick="get_radio_value();" style="width:8%;" type="submit" value=" Submit "/>  <input id="cancel1" name="cancel1" style="width:8%;" type="reset" value=" Cancel "/></div></form><br/></div><br/></div></div>
+</section>
+<section id="experiment-article-section-3">
+<div class="icon" id="experiment-article-section-3-icon">
+<!-- Enclose the icon image of your lab. -->
+<img src="../images/objective.jpg"/>
+</div>
+<div class="heading" id="experiment-article-section-3-heading">
+          Theory
+        </div>
+<div class="content" id="experiment-article-section-3-content"><div class="divContent"><p></p>
+
+<p class="MsoNormal" style="line-height: 150%;"><b><span style='font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>Theory</span></b><b><span style='font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'> </span></b><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><br/>
+</span></p>
+<p class="MsoNormal" style="line-height: 150%; text-align: right;"><a href="http://coep.vlab.co.in/?sub=33&amp;brch=91"><span style="font-family: arial,helvetica,sans-serif; font-size: medium;"></span></a></p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><strong></strong><br><br>
+
+<b>Linear Equations</b><br><br>
+A <b>linear equation</b> is any equation that can be written in the form<br>
+<center><br>Ax = b</center><br>
+ <p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;where A and b are real numbers (matrices) and x is a variable.  This form is sometimes called the <b>standard form</b> of a linear<br> equation.  Note that most linear equations will not start off in this form.  Also, the variable may or may not be an x so don’t get too<br> locked into always seeing an x there.<br>
+<br>To solve linear equations we will make heavy use of the following facts:<br><br>
+
+   1. If  a=b then a+c=b+c  for any c.  All this is saying is that we can add a number, c, to both sides of the equation and not change the equation.<br><br>
+
+   2. If  a=b then a-c=b-c  for any c.  As with the last property we can subtract a number, c, from both sides of an equation.<br><br>
+
+   3. If  a=b then ac=bc for any c.  Like addition and subtraction we can multiply both sides of an equation by a number, c, without changing the equation.<br><br>
+
+   4. If a=b then a/c=b/c for any non-zero c.  We can divide both sides of an equation by a non-zero number, c, without changing the equation.<br><br>
+
+One way to think of these rules is the following.  What we do to one side of an equation we have to do to the other side of the equation.<br>  If you remember that then you will always get these facts correct.<br><br>
+
+There are numerous methods like Gaussian Elimination, Cholesky Factorization, LU Decomposition and QR Decomposition, <br>to solve the linear equations in matrix form. We have detailed Gauss Jordan Elimination in the following presentation. <br><br>
+<b>The comparison between the computational cost of different methods used for linear solvers</b><br><br>
+<center><br><img src="images/capture.png" alt="" style="width:450px;height:250px;" ><br></center><br><br></p>
+</span></p>
+
+<p class="MsoNormal" style="line-height: 150%;"> </p>
+<p class="MsoNormal" style="line-height: 150%;"> </p>
+<p class="MsoNormal" style="line-height: 150%;"> </p>
+<p class="MsoNormal" style="line-height: 150%;"> </p></div></div>
+</section>
+<section id="experiment-article-section-4">
+<div class="icon" id="experiment-article-section-4-icon">
+<!-- Enclose the icon image of your lab.-->
+<img src="../images/simulation.jpg"/>
+</div>
+<div class="heading" id="experiment-article-section-4-heading">
+          Simulator
+        </div>
+<div class="content" id="experiment-article-section-4-content"><div class="divContent"><p><a href="Experiment1.html" target="_blank">Click here for Simulator</a><br><br>
+
+</p></div></div>
+</section>
+<section id="experiment-article-section-5">
+<div class="icon" id="experiment-article-section-5-icon">
+<!-- Enclose the icon image of your lab.-->
+<img src="../images/manual.jpg"/>
+</div>
+<div class="heading" id="experiment-article-section-5-heading">
+          Procedure and Demo
+        </div>
+<div class="content" id="experiment-article-section-5-content"><div class="divContent">
+
+<p class="MsoNormal" style="line-height: 150%;"><b><span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'> </span></b><br>
+
+<strong>Steps to perform experiment:</strong><br><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.&nbsp;&nbsp;&nbsp; Start simulator by clicking on the <b>Simulation</b> tab.<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.&nbsp;&nbsp;&nbsp; Click on the link to <b>enter the simulator</b>.<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.&nbsp;&nbsp;&nbsp; Login to your virtual Lab account.<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.&nbsp;&nbsp;&nbsp; First of all select a device from <b>Device</b> tab.(e.g. Device->Spartan 3E)<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.&nbsp;&nbsp;&nbsp; Then select an Experiment to perform from list.<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.&nbsp;&nbsp;&nbsp; After filling the necessary fields click on <b>Submit</b> button.<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.&nbsp;&nbsp;&nbsp; Here you will get answer to verify answer from simulator.<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.&nbsp;&nbsp;&nbsp; Now click on <b>Generate Verilog Code</b> button to generate the code.<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9.&nbsp;&nbsp;&nbsp; Load the generated program by clicking on <b>Load Program</b> tab.<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.&nbsp;&nbsp;&nbsp; Enter the file name without extension.<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.&nbsp;&nbsp;&nbsp; Click on <b>Save On Server</b> button to save program on your workspace at server.<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.&nbsp;&nbsp;&nbsp; Now click on <b>Compile</b> tab to compile your code on server.<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13.&nbsp;&nbsp;&nbsp; After successful compilation, click on ok to generate the test bench.<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14.&nbsp;&nbsp;&nbsp; Click on checkbox to select as output registers and select its type as output from list.<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15.&nbsp;&nbsp;&nbsp; Enter data width (MSB=7 and LSB=0 for 8-bit output register).<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16.&nbsp;&nbsp;&nbsp; Click on <b>Submit</b> button.<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17.&nbsp;&nbsp;&nbsp; Click on <b>Submit Test Bench</b> button to submit your test bench.<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18.&nbsp;&nbsp;&nbsp; Click on <b>Close This Window</b> button.<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19.&nbsp;&nbsp;&nbsp; Click on <b>Execute</b> tab which is under <b>Compile</b> tab.<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20.&nbsp;&nbsp;&nbsp; Click on <b>Timing Analysis</b> tab to view Timing Analysis of input program.<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21.&nbsp;&nbsp;&nbsp; For <b>Resource Utilization Report</b> click on Resource Utilizaion Report tab.<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.&nbsp;&nbsp;&nbsp; Your programs are saved on your workspace at server, which you can find under <b>Your Programs</b> tab.<br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23.&nbsp;&nbsp;&nbsp; If you want to write your own code Go to <b>File-> New</b> and repeate the procedure from step 10 to 21.<br><br>
+
+<strong>Linear Equation Solver Operational Demo:</strong><br><br>
+ 
+<b><font size="4">This video explains the operational demo of the experiment  "Linear Equation Solver".</font></b><br><br>
+
+<embed id="player_uid_64629558_1" width="75%" height="550px" name="player_uid_64629558_1" tabindex="0" type="application/x-shockwave-flash" src="https://s.ytimg.com/yts/swfbin/player-vflq_SRd4/watch_as3.swf" allowscriptaccess="always" bgcolor="#000000" allowfullscreen="true" wmode="opaque" flashvars="cr=IN&ssl=1&fs=1&iurl=https%3A%2F%2Fs.ytimg.com%2Fyts%2Fimg%2Fpixel-vfl3z5WfW.gif&index=0&is_html5_mobile_device=false&host_language=en&video_id=Xi4g7XckNkw&ldpj=-21&eurl=http%3A%2F%2Fcoep.vlab.co.in%2F%3Fsub%3D29%26brch%3D88%26sim%3D482%26cnt%3D709&enablejsapi=1&fexp=900718%2C904847%2C907263%2C927622%2C931343%2C934947%2C9406393%2C941004%2C943917%2C947209%2C947225%2C948124%2C948603%2C952302%2C952605%2C952901%2C955301%2C957103%2C957105%2C957201%2C959701&el=embedded&loaderUrl=http%3A%2F%2Fcoep.vlab.co.in%2F%3Fsub%3D29%26brch%3D88%26sim%3D482%26cnt%3D709&hl=en_US&idpj=-8&rel=1&playerapiid=player_uid_64629558_1&framer=http%3A%2F%2Fcoep.vlab.co.in%2F%3Fsub%3D29%26brch%3D88%26sim%3D482%26cnt%3D709">
+
+</p></div></div>
+</section>
+<section id="experiment-article-section-6">
+<div class="icon" id="experiment-article-section-6-icon">
+<!-- Enclose the icon image of your lab.-->
+<img src="images/content_94.png"/>
+</div>
+<div class="heading" id="experiment-article-section-6-heading">
+          Post Test
+        </div>
+<div class="content" id="experiment-article-section-6-content"><div class="divQuiz"><div id="displayQuiz"><form id="form11" method="post" name="form11">
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">1)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">	The computational complexity of the Gaussian Elimination method is:</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6058" name="ans0" type="radio" value="6058"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6058">2n^2</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6057" name="ans0" type="radio" value="6057"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6057">(2/3)n^3</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6059" name="ans0" type="radio" value="6059"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6059">2n^3+3n^2</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6060" name="ans0" type="radio" value="6060"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6060">None of the above.</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint10" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">2)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">Choose the pivot row of the following equations: x+y+z=3; 4x+3y+4z=8; 9x+3y+4z=7.</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6061" name="ans1" type="radio" value="6061"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6061">x+y+z=3</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6062" name="ans1" type="radio" value="6062"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6062"> 4x+3y+4z=8</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6063" name="ans1" type="radio" value="6063"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6063">9x+3y+4z=7</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6064" name="ans1" type="radio" value="6064"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6064">None of the above.</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint11" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">3)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">Gaussian Elimination without pivoting fails if,</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6065" name="ans2" type="radio" value="6065"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6065">Zero element is encountered in the diagonal matrix.</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6066" name="ans2" type="radio" value="6066"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6066">The matrix is sparse.</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6067" name="ans2" type="radio" value="6067"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6067">Both A and B</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6068" name="ans2" type="radio" value="6068"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6068">None of the above.</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint12" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">4)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">The command "reg [31:0] matrix [9:1];" will:</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6069" name="ans3" type="radio" value="6069"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6069">Create a 32 bit reg and 10 bit matrix.</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6070" name="ans3" type="radio" value="6070"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6070">Create a 32 bit reg and 9 bit matrix.</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6071" name="ans3" type="radio" value="6071"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6071">Create a 31 bit reg and 9 bit matrix</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6072" name="ans3" type="radio" value="6072"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6072">None of the above.</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint13" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">5)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">The command "reg [95:0] element0,element1,element2,element3;" will</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6073" name="ans3" type="radio" value="6073"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6073">Create 4 elements each of 96 bits.</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6074" name="ans3" type="radio" value="6074"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6074">Create 3 elements each of 95 bits.</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6075" name="ans3" type="radio" value="6075"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6075">Create 4 elements each of 95 bits.</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6076" name="ans3" type="radio" value="6076"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6076">None of the above.</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint13" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+
+<input align="middle" id="loadTime" name="loadTime" type="hidden" value="1379688873/"/><br/><div style="padding-left:40px;"><input id="submit1" name="submit1" onclick="get_radio_value();" style="width:8%;" type="submit" value=" Submit "/>  <input id="cancel1" name="cancel1" style="width:8%;" type="reset" value=" Cancel "/></div></form><br/></div><br/></div></div>
+</section>
+
+<section id="experiment-article-section-8">
+<div class="icon" id="experiment-article-section-8-icon">
+<!-- Enclose the icon image of your lab.-->
+<img src="images/assign.png"/>
+</div>
+<div class="heading" id="experiment-article-section-8-heading">
+          Assignment
+        </div>
+<div class="content" id="experiment-article-section-8-content"><div class="divContent"><p><strong>WRITE A PROGRAM TO:-</strong><br><br>
+<p class="MsoNormal" style="line-height: 150%;"><span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.&nbsp;&nbsp;&nbsp;Solve the following system of linear equations  x+y+2z=8;  -x-2y+3z=1; 3x-7y+4z=10 using LU Decomposition.<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.&nbsp;&nbsp;&nbsp;Solve the following system of linear equations  x+y+2z=8;  -x-2y+3z=1; 3x-7y+4z=10 using Cholesky Decomposition.<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.&nbsp;&nbsp;&nbsp;Solve the following system of linear equations  x+y+2z=8;  -x-2y+3z=1; 3x-7y+4z=10 using QR Decomposition.<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.&nbsp;&nbsp;&nbsp;Compare the results obtained using LU Decomposition, Cholesky Decomposition and <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QR Decomposition with Gaussian elimination in respects of computational complexity and timing.<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.&nbsp;&nbsp;&nbsp;Generate Inverse Matrix using Gaussian Elimination for the following system of linear equations  x+y+2z=8;  -x-2y+3z=1; 3x-7y+4z=10.<br><br>
+</span></p>
+ <h2><span style="color: rgb(51, 102, 255);">  </span>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="Word.Document" name="ProgId"/>
+<meta content="Microsoft Word 12" name="Generator"/>
+<meta content="Microsoft Word 12" name="Originator"/>
+<link href="file:///C:%5CUsers%5Cinstru%5CAppData%5CLocal%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_filelist.xml" rel="File-List"/>
+<link href="file:///C:%5CUsers%5Cinstru%5CAppData%5CLocal%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_themedata.thmx" rel="themeData"/>
+<link href="file:///C:%5CUsers%5Cinstru%5CAppData%5CLocal%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_colorschememapping.xml" rel="colorSchemeMapping"/>
+</h2>
+</p></div></div>
+</section>
+
+
+
+</div>
+</article>
+</div>
+</body></html>

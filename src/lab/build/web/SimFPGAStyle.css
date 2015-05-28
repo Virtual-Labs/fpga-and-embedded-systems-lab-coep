@@ -1,0 +1,217 @@
+#SimSubHeading{
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding: 0;
+    color:#FF6633;
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: arial;
+    text-align: left;
+}
+
+#sddm li
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: arial;
+    border: 1px;
+    width: auto;
+    border-color: #ffffff;
+}
+
+#sddm li a
+{
+    display: block;
+    margin: 0 1px 0 0;
+    padding: 4px 10px;
+    width: auto;
+    background: #5970B2;
+    color: #FFF;
+    text-align: center;
+    text-decoration: none
+}
+
+#sddm li a:hover
+{
+    background: #49A3FF
+}
+
+#sddm div
+{
+    position: absolute;
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    background: #EAEBD8;
+    border: 1px solid #5970B2;
+    width: auto;
+}
+
+#sddm div a
+{
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 5px 10px;
+    white-space: nowrap;
+    text-align: left;
+    text-decoration: none;
+    background: #EAEBD8;
+    color: #2875DE;
+    font-size: 0.8em;
+    font-weight: normal;
+    font-family: arial;}
+
+#sddm div a:hover
+{
+    background: #49A3FF;
+    color: #FFF;
+}
+
+#copyright{
+    background-color: #0440b8;
+    color: #ffffff;
+}
+
+#outputFrame{
+    border: 2px;
+    border-style: solid;
+    width: 99%;
+    height: 89%;
+}
+
+#submitButton{
+    margin-top: 10px;
+    padding: 8px;
+
+
+}
+
+#formStyle{
+    margin: 0;
+    padding: 0;
+}
+
+#formStyle textarea{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /*   background-color: blue;*/
+}
+
+
+
+
+.ledpanel{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+}
+
+.switchpanel{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+}
+
+.iopanel{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+
+.ledModel{
+    display: block;
+    width: 12px;
+    height: 12px;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    background-color: #FFFFFF;
+
+    margin: 30%;
+    padding: 0;
+    border:2px;
+    border-color: #000;
+    border-style: solid;
+}
+
+.ledModelLabel{
+    font-size: 10px;
+    text-align: center;
+    margin: 20%;
+    padding: 0;
+
+}
+
+.switchModel{
+    margin-right: 30%;
+    margin-left: 30%;
+    margin-bottom: 0;
+    margin-top: 0;
+
+    padding: 0;
+    border:2px;
+}
+
+.switchModelLabel{
+    font-size: 10px;
+    text-align: center;
+    margin-top: 10%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.IOModel{
+    display: block;
+    width: 8px;
+    height: 8px;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    background-color: #cbcbcb;
+
+    margin: 30%;
+    padding: 0;
+    border:2px;
+    border-color: #000;
+    border-style: solid;
+}
+
+.IOModelLabel{
+    font-size: 10px;
+    text-align: center;
+    margin: 20%;
+    padding: 0;
+}
+
+
+
+
+
+#output{
+    border: 2px;
+    border-style: solid;
+    font-size: 12px;
+
+}
+
+
+
+
+
+
+
+
+

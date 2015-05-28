@@ -1,0 +1,583 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.--><!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit --><!DOCTYPE html>
+<html><head></head><body>
+<div id="experiment"> <!-- The Experiment Document Container-->
+<!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+<header class="default" id="experiment-header">
+<div class="logo" id="experiment-header-logo">
+<!-- Enclose the logo image of your lab or write it in 
+      text-->
+<img src="../images/logo.jpg"/>
+</div>
+<div class="heading" id="experiment-header-heading">
+<!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+<a href="../index.html">FPGA & Embedded Systems Lab</a>
+</div>
+<!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+</header>
+<!-- The lab article is the main content area where all the 
+  experiment content sits-->
+<article id="experiment-article">
+<!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+<div class="breadcrumb" id="experiment-article-breadcrumb">
+</div>
+<header class="heading" id="experiment-article-heading">Designing of Reconfigurable Architecture for PID Controller</header>
+<!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+<nav class="default" id="experiment-article-navigation">
+<ul id="experiment-article-navigation-menu">
+<!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          &lt;li&gt; tag as shown below-->
+</ul>
+</nav>
+<!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+<div id="experiment-article-sections">
+<!-- First section of the article-->
+<section id="experiment-article-section-1">
+<div class="icon" id="experiment-article-section-1-icon">
+<!-- Enclose the icon image of your lab -->
+<img src="../images/introduction.jpg"/>
+</div>
+<!-- The heading for the section can be enclosed in a 
+          div tag. -->
+<div class="heading" id="experiment-article-section-1-heading">
+            Aim
+          </div>
+<!-- Write the section content inside a paragraph 
+          element, You can also include images with &lt;img&gt; tag -->
+<div class="content" id="experiment-article-section-1-content"><div class="divContent"><h2 style="color: Red;"><strong><u><span style="font-family: arial,helvetica,sans-serif; color: rgb(255, 0, 0);"><span style="font-size: large;"></span></span></u></strong></h2>
+
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+
+ <strong>Aim:-</strong>
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+ Design and implementation of PID controller architecture using FPGA.
+</p>
+
+
+</span></p>
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+
+ <strong>Pre-Requisites:-</strong>
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+ Before performing the experiment the user should know:
+      <br><br>
+       1. Basics of PID controller<br>
+       2. PID algorithms
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+
+ <strong>Objectives:-</strong>
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+ Students will learn:
+ <br><br>
+     1. Discrete PID Implementation on FPGA<br>
+     2. Effect of sample time on performance of PID
+</p>
+
+</span></p>
+
+
+<p><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(0, 0, 0);"><br/>
+</span></p></div></div>
+</section>
+<!-- Second section of the article-->
+<section id="experiment-article-section-2">
+<div class="icon" id="experiment-article-section-2-icon">
+<!-- Enclose the icon image of your lab. -->
+<img src="images/content_94.png"/>
+</div>
+<!-- The heading for the section can be enclosed in a 
+        div tag. -->
+<div class="heading" id="experiment-article-section-2-heading">
+          Pre Test
+        </div>
+<!-- Write the section content inside a paragraph 
+        element, we can also include images with &lt;img&gt; tag -->
+<div class="content" id="experiment-article-section-2-content"><div class="divQuiz"><div id="displayQuiz"><form id="form11" method="post" name="form11">
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">1)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">PID is used in</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans5998" name="ans0" type="radio" value="5998"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans5998"> Automobile</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans5999" name="ans0" type="radio" value="5999"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans5999">Robotics</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6000" name="ans0" type="radio" value="6000"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6000">Aeronautics</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6001" name="ans0" type="radio" value="6001"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6001">All of above</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint10" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">2)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">In PID: P,I,D deals with</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6002" name="ans1" type="radio" value="6002"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6002">P: Present error I: Past error D: Future error</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6003" name="ans1" type="radio" value="6003"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6003">None of the above</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6004" name="ans1" type="radio" value="6004"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6004">P: Future error I: Present error D: Past error</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6005" name="ans1" type="radio" value="6005"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6005">P: Past error I: Future error D: Present error</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint11" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">3)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">In PID sequence of action is</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6006" name="ans2" type="radio" value="6006"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6006">D,I,P</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6007" name="ans2" type="radio" value="6007"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6007">P,D,I</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6008" name="ans2" type="radio" value="6008"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6008">P,I,D</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6009" name="ans2" type="radio" value="6009"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6009">D,P,I</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint12" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">4)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">What are major drawbacks of PID</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6037" name="ans3" type="radio" value="6037"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6037">Anti-reset wind up</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6036" name="ans3" type="radio" value="6036"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6036">All of above</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6035" name="ans3" type="radio" value="6035"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6035">Integral wind up</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6034" name="ans3" type="radio" value="6034"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6034">Actuator saturation</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint13" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">5)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">Which are basic PID tuning methods </span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6077" name="ans4" type="radio" value="6077"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6037">Advance tuning method   </label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6076" name="ans4" type="radio" value="6076"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6036">Cohen- coon tuning method   </label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6075" name="ans4" type="radio" value="6075"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6035">Ziegler Nichols method    </label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6074" name="ans4" type="radio" value="6074"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6034">1 & 2</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint14" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<input align="middle" id="loadTime" name="loadTime" type="hidden" value="1379688870/"/><br/><div style="padding-left:40px;"><input id="submit1" name="submit1" onclick="get_radio_value();" style="width:8%;" type="submit" value=" Submit "/>  <input id="cancel1" name="cancel1" style="width:8%;" type="reset" value=" Cancel "/></div></form><br/></div><br/></div></div>
+</section>
+<section id="experiment-article-section-3">
+<div class="icon" id="experiment-article-section-3-icon">
+<!-- Enclose the icon image of your lab. -->
+<img src="../images/objective.jpg"/>
+</div>
+<div class="heading" id="experiment-article-section-3-heading">
+          Theory
+        </div>
+<div class="content" id="experiment-article-section-3-content"><div class="divContent"><p></p>
+
+<p class="MsoNormal" style="line-height: 150%;"><b><span style='font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>Theory</span></b><b><span style='font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'> </span></b><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><br/>
+</span></p>
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+
+ <strong>Introduction:</strong>
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+The objective of a control system design is to make a physical system behave in a useful fashion, causing its output to track a desire reference input even in the presence of noise, modeling error and disturbances. In the control system, one of the main components is the controller, which generates the appropriate control signal for the physical system to regulate the system performance. The Proportional- Integral-Derivative (PID) controller is one of the most common types of feedback controllers that are used in dynamic systems. It is used in the wide variety of control systems due its simple structure and robust performance. This is possible to have a PI, PD, PID or just a P control. It is very rare to have a ID control.
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+
+ <strong>Proportional + Integral + Derivative (PID) controller:</strong>
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+The basic structure of conventional feedback control systems is shown in Figure below. The purpose of control is to make the process variable y follow the set-point value r. To achieve this purpose, the manipulated variable u is changed at the command of the controller. The “disturbance” is any factor, other than the manipulated variable, that influences the process variable. The error e is defined by e = r – y. The compensator C(s) is the computational rule that determines the manipulated variable u based on its input data, which is the error e in the case of Figure. The last thing to notice about the Figure is that the process variable y is assumed to be measured by the detector, which is not shown explicitly here, with sufficient accuracy instantaneously that the input to the controller can be regarded as being exactly equal to y.
+
+<center>
+	<img src="img/1.JPG" style="width:490px;height:290px">
+</center> 
+</p>
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+
+When used in this manner, the three element of PID produces outputs with the following nature:
+ 
+ <br>P element: proportional to the error at the instant t, this is the “present” error.
+<br> I element: proportional to the integral of the error up to the instant t, which can be interpreted as the accumulation of the “past” error.
+<br>D element: proportional to the derivative of the error at the instant t, which can be interpreted as the prediction of the “future” error.
+ <br><br>
+ Thus, the PID controller can be understood as a controller that takes the present, the past, and the future of the error into consideration. The general transfer function of the PID controller looks like the following:
+ <center>
+	<img src="img/2.png" style="width:250px;height:120px">
+</center></p> 
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+
+ <br>where, K<sub>p</sub>, K<sub>i</sub> and K<sub>d</sub> are the proportional, integral and derivative gains respectively. The values of these gains are decided using any standard rule or tuning methods.
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+
+ <strong> Tuning methods of PID controller:</strong>
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+1.Ziegler-Nichols Open-loop<br>
+2.Coon-Cohen Open-loop<br>
+3.Ziegler-Nichols Closed-loop<br>
+4.Lambda Tuning<br>
+5.Visual Loop Tuning<br>
+6.Auto-tuning<br>
+ 
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+
+ <strong> Ziegler-Nichols Open-loop</strong>
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+The values of critical gain K<sub>cr</sub> and corresponding time period P<sub>cr</sub> are determined experimentally or can be calculated using bode plot. K<sub>p</sub>, T<sub>i</sub> and T<sub>d</sub> are obtained as given in Table below,
+<table align="center" border="1" cellpadding="1" cellspacing="1" width="600">
+    <thead>
+        <tr>
+            <th scope="col" style="text-align: center; ">Controller</th>
+            <th scope="col" style="text-align: center; ">K<sub>p</sub></th>
+            <th scope="col" style="text-align: center; ">T<sub>i</sub></th>
+            <th scope="col" style="text-align: center; ">T<sub>d</sub></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row" style="text-align: center; ">P</th>
+            <td style="text-align: center; "><font face="Times New Roman, serif" size="3"><span style="line-height: 18px;">0.5</span></font>&nbsp;<span style="text-align: justify; line-height: 17px; font-family: 'Times New Roman', serif; font-size: 15px; ">P</span><sub style="line-height: 17px; text-align: justify; "><font face="Calibri, sans-serif">cr&nbsp;</font></sub>&nbsp;<!--[endif]--></td>
+            <td style="text-align: center; ">-</td>
+            <td style="text-align: center; ">-</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align: center; ">PI</th>
+            <td style="text-align: center; "><font face="Times New Roman, serif" size="3"><span style="line-height: 18px; ">0.45&nbsp;</span></font><span style="text-align: justify; line-height: 17px; font-family: 'Times New Roman', serif; font-size: 15px; ">P</span><sub style="line-height: 17px; text-align: justify; "><font face="Calibri, sans-serif">cr&nbsp;</font></sub>&nbsp;&nbsp;&nbsp;</td>
+            <td style="text-align: center; "><font face="Times New Roman, serif" size="3"><span style="line-height: 18px; ">0.833&nbsp;</span></font><span style="text-align: justify; line-height: 17px; font-family: 'Times New Roman', serif; font-size: 15px; ">P</span><sub style="line-height: 17px; text-align: justify; "><font face="Calibri, sans-serif">cr&nbsp;</font></sub>&nbsp;&nbsp;&nbsp;</td>
+            <td style="text-align: center; ">-</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align: center; ">PID</th>
+            <td style="text-align: center; "><font face="Times New Roman, serif" size="3"><span style="line-height: 18px; ">0.6&nbsp;</span></font><span style="text-align: justify; line-height: 17px; font-family: 'Times New Roman', serif; font-size: 15px; ">P</span><sub style="line-height: 17px; text-align: justify; "><font face="Calibri, sans-serif">cr&nbsp;</font></sub>&nbsp;&nbsp;&nbsp;</td>
+            <td style="text-align: center; "><font face="Times New Roman, serif" size="3"><span style="line-height: 18px; ">0.5&nbsp;</span></font><span style="text-align: justify; line-height: 17px; font-family: 'Times New Roman', serif; font-size: 15px; ">P</span><sub style="line-height: 17px; text-align: justify; "><font face="Calibri, sans-serif">cr&nbsp;</font></sub>&nbsp;&nbsp;&nbsp;</td>
+            <td style="text-align: center; "><font face="Times New Roman, serif" size="3"><span style="line-height: 18px; ">0.125&nbsp;</span></font><span style="text-align: justify; line-height: 17px; font-family: 'Times New Roman', serif; font-size: 15px; ">P</span><sub style="line-height: 17px; text-align: justify; "><font face="Calibri, sans-serif">cr&nbsp;</font></sub>&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+
+</p>
+
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+
+ <strong>How do the PID parameters affect system dynamics?</strong>
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+The effects of increasing each of the controller parametersKp, Ki and Kd   and can be summarized as
+<table align="center" border="1" cellpadding="1" cellspacing="1" width="600">
+    <thead>
+        <tr>
+            <th scope="col" style="text-align: center; "><b><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+            mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-ansi-language:
+            EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">Response</span></b></th>
+            <th scope="col" style="text-align: center; "><b><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+            mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-ansi-language:
+            EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">Rise Time</span></b></th>
+            <th scope="col" style="text-align: center; "><b><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+            mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-ansi-language:
+            EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">Overshoot</span></b></th>
+            <th scope="col" style="text-align: center; "><b><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+            mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-ansi-language:
+            EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">Settling Time</span></b></th>
+            <th scope="col" style="text-align: center; "><b><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+            mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-ansi-language:
+            EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">S-S Error</span></b></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row" style="text-align: center; "><span style="font-weight: normal; text-align: start; line-height: 17px; font-family: 'Times New Roman', serif; font-size: 15px; ">K</span><font style="font-size: 12px; font-weight: normal; text-align: start; " face="Calibri, sans-serif"><span style="font-size: 15px; line-height: 17px; "><sub>p&nbsp;</sub></span></font>&nbsp;</th>
+            <td style="text-align: center; "><span style="font-size:12.0pt;line-height:115%;
+            font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:Calibri;
+            mso-fareast-theme-font:minor-latin;mso-ansi-language:EN-US;mso-fareast-language:
+            EN-US;mso-bidi-language:AR-SA">Decrease</span></td>
+            <td style="text-align: center; "><span style="font-size:12.0pt;line-height:115%;
+            font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:Calibri;
+            mso-fareast-theme-font:minor-latin;mso-ansi-language:EN-US;mso-fareast-language:
+            EN-US;mso-bidi-language:AR-SA">Increase</span></td>
+            <td style="text-align: center; "><span style="font-size:12.0pt;line-height:115%;
+            font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:Calibri;
+            mso-fareast-theme-font:minor-latin;mso-ansi-language:EN-US;mso-fareast-language:
+            EN-US;mso-bidi-language:AR-SA">NT</span></td>
+            <td style="text-align: center; "><span style="font-size:12.0pt;line-height:115%;
+            font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:Calibri;
+            mso-fareast-theme-font:minor-latin;mso-ansi-language:EN-US;mso-fareast-language:
+            EN-US;mso-bidi-language:AR-SA">Decrease</span></td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align: center; "><span style="font-weight: normal; text-align: start; font-size: 12pt; line-height: 18px; font-family: 'Times New Roman', serif; ">K</span><font style="font-size: 12px; font-weight: normal; text-align: start; " face="Calibri, sans-serif"><sub><span style="font-size: 15px; line-height: 17px; ">i&nbsp;</span></sub></font>&nbsp;</th>
+            <td style="text-align: center; "><span style="font-size:12.0pt;line-height:115%;
+            font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:Calibri;
+            mso-fareast-theme-font:minor-latin;mso-ansi-language:EN-US;mso-fareast-language:
+            EN-US;mso-bidi-language:AR-SA">Decrease</span></td>
+            <td style="text-align: center; "><span style="font-size:12.0pt;line-height:115%;
+            font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:Calibri;
+            mso-fareast-theme-font:minor-latin;mso-ansi-language:EN-US;mso-fareast-language:
+            EN-US;mso-bidi-language:AR-SA">Increase</span></td>
+            <td style="text-align: center; "><span style="font-size:12.0pt;line-height:115%;
+            font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:Calibri;
+            mso-fareast-theme-font:minor-latin;mso-ansi-language:EN-US;mso-fareast-language:
+            EN-US;mso-bidi-language:AR-SA">Increase</span></td>
+            <td style="text-align: center; "><span style="font-size:12.0pt;line-height:115%;
+            font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:Calibri;
+            mso-fareast-theme-font:minor-latin;mso-ansi-language:EN-US;mso-fareast-language:
+            EN-US;mso-bidi-language:AR-SA">Eliminate</span></td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align: center; "><span style="font-weight: normal; text-align: start; line-height: 17px; font-family: 'Times New Roman', serif; font-size: 15px; ">K</span><font style="font-size: 12px; font-weight: normal; text-align: start; " face="Calibri, sans-serif"><span style="font-size: 15px; line-height: 17px; "><sub>d&nbsp;</sub></span></font>&nbsp;</th>
+            <td style="text-align: center; ">NT</td>
+            <td style="text-align: center; "><span style="font-size:12.0pt;line-height:115%;
+            font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:Calibri;
+            mso-fareast-theme-font:minor-latin;mso-ansi-language:EN-US;mso-fareast-language:
+            EN-US;mso-bidi-language:AR-SA">Decrease</span></td>
+            <td style="text-align: center; "><span style="font-size:12.0pt;line-height:115%;
+            font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:Calibri;
+            mso-fareast-theme-font:minor-latin;mso-ansi-language:EN-US;mso-fareast-language:
+            EN-US;mso-bidi-language:AR-SA">Decrease</span></td>
+            <td style="text-align: center; "><span style="font-size:12.0pt;line-height:115%;
+            font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:Calibri;
+            mso-fareast-theme-font:minor-latin;mso-ansi-language:EN-US;mso-fareast-language:
+            EN-US;mso-bidi-language:AR-SA">NT</span></td>
+        </tr>
+    </tbody>
+</table><center> S-S = Steady State, NT = No definite trend</center>
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+
+ <strong> Applications of PID:</strong>
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+1.Aerospace<br>
+2.Process Control<br>
+3.Manufacturing<br>
+4.Robotics<br>
+5.Automation and<br>
+6.Transpiration system <br>
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+
+ <strong>Digital PID Controller:</strong>
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+Today, digital controllers are being used in many large and small-scale control systems, replacing the analog controllers. It is now a common practice to implement PID controllers in its digital version, which means that they operate in discrete time domain and deal with analog signals quantized in a limited number of levels. The trend toward digital rather than analog control is mainly due to the availability of low-cost digital computers. A digital version of the PID controller is shown in following Figure;
+<center>
+	<img src="img/2.jpg" style="width:490px;height:290px"><br>  Fig. Block Diagram of Digital PID Controller
+</center>
+
+</p>
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+In its digital version, the integral becomes a sum and the differential a difference. The continuous time signal e(t) is sampled in fixed time intervals equals a determined sample period, here called Tc. An A/D (analog to digital) converter interfaces the input and a D/A (digital to analog) converter interfaces the output. This sampled and digitalized input, called e, exists only in time instants t = kT<sub>c</sub></sub></sub>. The digital PID controller equation can be written in two ways, the position form and velocity form. 
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+
+ <strong>Position Algorithm:</strong>
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+ Consider controller output for a continuous-type PID controller
+	<br><img src="img/7.JPG"  style="width:450px;height:100px"><br>
+
+ The above equation can be discretised at small sampling interval Ts
+Taking the first order derivative,
+
+	<br><img src="img/8.JPG"  style="width:400px;height:90px"><br>
+
+and using rectangular integration, we can approximate as:
+
+	<br><img src="img/9.JPG"  style="width:300px;height:100px"><br>
+
+Now replacing the derivative and integral terms in equation (1), we get
+
+	<br>	<img src="img/10.JPG"  style="width:480px;height:100px"><br>
+
+ But the major problem here is that the error values at all the time instants are to be stored.
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+
+ <strong>Velocity Algorithm: </strong>
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+ Consider the equation (2), we can write error signal at the (n-1)th instant as below;
+
+	<br> <img src="img/11.JPG"  style="width:500px;height:100px"><br> 
+ Subtracting equation (3) from (2)<br> 
+ <br> <img src="img/12.JPG"><br> <br> 
+ 
+</p>
+
+
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+
+ <strong>FPGA Implementation PID Algorithm:</strong>
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+For the implementation purpose we used position form of digital PID.<br> 
+Steps to implement PID algorithm on FPGA.<br> 
+Step1: Transfer function of a system to be control, convert it to state space form (A, B, C and D)<br> 
+Step2: Initialization of states (x), inputs (u), output (y), reference (set-point) and P, I, D gains<br> 
+Step3: Using Runge-Kutta method find value of x1<br> 
+Step4: Calculate value of y1<br> 
+Step5: Give calculated error (e1) to FPGA as input<br> 
+Step6: Find value of u1 using customize IP cores (fixed or floating point) like ADD, SUB,<br> 
+            MUL, INV (as described in previous experiments)<br> 
+Step7: Give calculated value of u1 to Step3.<br>  
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+
+ <strong>Design Methodology:</strong>
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+ The PID algorithm on FPGA can be implemented using serial and parallel architecture to reduce the sample time of PID. Computational units involved in PID algorithm
+ <table align="center" border="1" cellpadding="1" cellspacing="1" width="600">
+    <tbody>
+        <tr>
+            <td style="text-align: center; "><b><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+            mso-fareast-font-family:CMR12;mso-ansi-language:EN-US;mso-fareast-language:
+            EN-US;mso-bidi-language:AR-SA">Arithmetic Operations / Storage Unit</span></b></td>
+            <td style="text-align: center; "><b><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+            mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-font:minor-fareast;
+            mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">Number of operations / Units</span></b></td>
+        </tr>
+        <tr>
+            <td style="text-align: center; "><span style="font-size:12.0pt;line-height:115%;
+            font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:CMR12;mso-ansi-language:
+            EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">Addition</span></td>
+            <td style="text-align: center; ">3</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; "><span style="font-size:12.0pt;line-height:115%;
+            font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:CMR12;mso-ansi-language:
+            EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">Subtraction</span></td>
+            <td style="text-align: center; ">1</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; "><span style="font-family: 'Times New Roman', serif; font-size: 16px; line-height: 18px; ">Multiplication</span></td>
+            <td style="text-align: center; ">3</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; "><span style="font-size:12.0pt;line-height:115%;
+            font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:CMR12;mso-ansi-language:
+            EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">Resistor</span></td>
+            <td style="text-align: center; ">1</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; "><b><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+            mso-fareast-font-family:CMR12;mso-ansi-language:EN-US;mso-fareast-language:
+            EN-US;mso-bidi-language:AR-SA">Total</span></b></td>
+            <td style="text-align: center; ">8</td>
+        </tr>
+    </tbody>
+</table>
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+
+ <strong>Serial Architecture</strong>
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+  Do each step serially as given in algorithm
+</p>
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+
+ <strong>Parallel Architecture</strong>
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+ <center>
+	<img src="img/6.jpg"><br>  Fig. Parallel Architecture of PID<br>
+</center>
+<center>
+	<img src="img/5.jpg"><br> Fig. Five Pipeline Architecture of PID
+</center>
+</p>
+<p class="MsoNormal" style="line-height: 150%;"> </p></div></div>
+</section>
+<section id="experiment-article-section-4">
+<div class="icon" id="experiment-article-section-4-icon">
+<!-- Enclose the icon image of your lab.-->
+<img src="../images/simulation.jpg"/>
+</div>
+<div class="heading" id="experiment-article-section-4-heading">
+          Simulator
+        </div>
+<div class="content" id="experiment-article-section-4-content"><div class="divContent"><p><a href="Experiment10.html" target="_blank">Click here for Simulator</a><br><br>
+
+
+ 
+</p></div></div>
+</section>
+<section id="experiment-article-section-5">
+<div class="icon" id="experiment-article-section-5-icon">
+<!-- Enclose the icon image of your lab.-->
+<img src="../images/manual.jpg"/>
+</div>
+<div class="heading" id="experiment-article-section-5-heading">
+          Procedure and Demo
+        </div>
+<div class="content" id="experiment-article-section-5-content"><div class="divContent">
+
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+
+ <strong>Steps to perform experiment:</strong>
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+1.Start simulator by clicking on the <strong>Simulation </strong>tab.<br>
+2.Click on the link to <strong>enter the simulator.</strong><br>
+3.Login to your virtual Lab account.<br>
+4.First of all select a device from <strong>Device</strong> tab.(e.g. Device->Spartan 3E)<br>
+5.Then select an Experiment to perform from list.<br>
+6.After filling the necessary fields click on <strong>Submit</strong> button.<br>
+7.Here you will get answer to verify answer from simulator.<br>
+8.Now click on <strong>Generate Verilog Code</strong> button to generate the code.<br>
+9.Load the generated program by clicking on <strong>Load Program</strong> tab.<br>
+10Enter the file name without extension.<br>
+11.Click on <strong>Save On Server</strong> button to save program on your workspace at server.<br>
+12.Now click on <strong>Compile</strong> tab to compile your code on server.<br>
+13.After successful compilation, click on ok to generate the test bench.<br>
+14.Click on checkbox to select as output registers and select its type as output from list.<br>
+15.Enter data width (MSB=7 and LSB=0 for 8-bit output register).<br>
+16.Click on <strong>Submit</strong> button.<br>
+17.Click on <strong>Submit Test Bench </strong>button to submit your test bench.<br>
+18.Click on <strong>Close This Window</strong> button.<br>
+19Click on <strong>Execute</strong> tab which is under <strong>Compile</strong> tab.<br>
+20.Click on <strong>Timing Analysis</strong> tab to view Timing Analysis of input program.<br>
+21.For <strong>Resource Utilization Report</strong> click on Resource Utilizaion Report tab.<br>
+22.Your programs are saved on your workspace at server, which you can find under <strong>Your Programs</strong> tab.<br>
+23.If you want to write your own code Go to <strong>File-> New </strong>and repeate the procedure from step 10 to 21.<br>
+
+
+<br><br></p>
+<p class="MsoNormal" style="line-height: 150%;"><b><span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'></span></b><span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'></span></p>
+<p class="MsoNormal" style="line-height: 150%;"><span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'> </span></p>
+
+<p class="MsoNormal" style="line-height: 150%;"><span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'> </span></p></div></div>
+</section>
+<section id="experiment-article-section-6">
+<div class="icon" id="experiment-article-section-6-icon">
+<!-- Enclose the icon image of your lab.-->
+<img src="images/content_94.png"/>
+</div>
+<div class="heading" id="experiment-article-section-6-heading">
+          Post Test
+        </div>
+<div class="content" id="experiment-article-section-6-content"><div class="divQuiz"><div id="displayQuiz"><form id="form11" method="post" name="form11">
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">1)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">PID tuning method is used to</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6058" name="ans0" type="radio" value="6058"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6058">Get graph without static error</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6057" name="ans0" type="radio" value="6057"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6057">Tune PID smoothly</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6059" name="ans0" type="radio" value="6059"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6059">Reach set point faster</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6060" name="ans0" type="radio" value="6060"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6060">Reach set point without spikes and oscillations</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint10" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">2)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">Which are the basic PID algorithms</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6061" name="ans1" type="radio" value="6061"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6061">Position algorithm</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6062" name="ans1" type="radio" value="6062"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6062">Velocity algorithm</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6063" name="ans1" type="radio" value="6063"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6063">Recursive algorithm</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6064" name="ans1" type="radio" value="6064"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6064">1 & 2</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint11" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">3)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">After studying experiment number 3 and 7, according to you which approach will be better for PID</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6065" name="ans2" type="radio" value="6065"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6065">Iterative</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6066" name="ans2" type="radio" value="6066"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6066">Parallel</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6067" name="ans2" type="radio" value="6067"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6067">Pipeline</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6068" name="ans2" type="radio" value="6068"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6068">Serial</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint12" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">4)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">Why FPGA is preferred over micro-controller for PID implementation</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6069" name="ans3" type="radio" value="6069"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6069">For faster execution of PID</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6070" name="ans3" type="radio" value="6070"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6070">For reconfigurable approach</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6071" name="ans3" type="radio" value="6071"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6071">For better accuracy</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6072" name="ans3" type="radio" value="6072"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6072">All of the above</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint13" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">5)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">Applicability of PID is restricted to higher order system due to </span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6077" name="ans4" type="radio" value="6077"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6037">Poor load regulation</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6076" name="ans4" type="radio" value="6076"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6036">Dynamic control of system becomes difficult </label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6075" name="ans4" type="radio" value="6075"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6035">Excessive overload</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6074" name="ans4" type="radio" value="6074"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6034">All of the above</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint14" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<input align="middle" id="loadTime" name="loadTime" type="hidden" value="1379688873/"/><br/><div style="padding-left:40px;"><input id="submit1" name="submit1" onclick="get_radio_value();" style="width:8%;" type="submit" value=" Submit "/>  <input id="cancel1" name="cancel1" style="width:8%;" type="reset" value=" Cancel "/></div></form><br/></div><br/></div></div>
+<h2><span style="color: rgb(51, 102, 255);">  </span>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="Word.Document" name="ProgId"/>
+<meta content="Microsoft Word 12" name="Generator"/>
+<meta content="Microsoft Word 12" name="Originator"/>
+<link href="file:///C:%5CUsers%5Cinstru%5CAppData%5CLocal%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_filelist.xml" rel="File-List"/>
+<link href="file:///C:%5CUsers%5Cinstru%5CAppData%5CLocal%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_themedata.thmx" rel="themeData"/>
+<link href="file:///C:%5CUsers%5Cinstru%5CAppData%5CLocal%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_colorschememapping.xml" rel="colorSchemeMapping"/>
+</h2>
+</section>
+
+
+
+
+</div>
+</article>
+</div>
+</body></html>

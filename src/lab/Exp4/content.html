@@ -1,0 +1,428 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.--><!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit --><!DOCTYPE html>
+<html><head></head><body>
+<div id="experiment"> <!-- The Experiment Document Container-->
+<!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+<header class="default" id="experiment-header">
+<div class="logo" id="experiment-header-logo">
+<!-- Enclose the logo image of your lab or write it in 
+      text-->
+<img src="../images/logo.jpg"/>
+</div>
+<div class="heading" id="experiment-header-heading">
+<!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+<a href="../index.html">FPGA & Embedded Systems Lab</a>
+</div>
+<!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+</header>
+<!-- The lab article is the main content area where all the 
+  experiment content sits-->
+<article id="experiment-article">
+<!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+<div class="breadcrumb" id="experiment-article-breadcrumb">
+</div>
+<header class="heading" id="experiment-article-heading">Floating Point Arithmetic Operations </header>
+<!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+<nav class="default" id="experiment-article-navigation">
+<ul id="experiment-article-navigation-menu">
+<!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          &lt;li&gt; tag as shown below-->
+</ul>
+</nav>
+<!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+<div id="experiment-article-sections">
+<!-- First section of the article-->
+<section id="experiment-article-section-1">
+<div class="icon" id="experiment-article-section-1-icon">
+<!-- Enclose the icon image of your lab -->
+<img src="../images/introduction.jpg"/>
+</div>
+<!-- The heading for the section can be enclosed in a 
+          div tag. -->
+<div class="heading" id="experiment-article-section-1-heading">
+            Aim
+          </div>
+<!-- Write the section content inside a paragraph 
+          element, You can also include images with &lt;img&gt; tag -->
+<div class="content" id="experiment-article-section-1-content"><div class="divContent"><h2 style="color: Red;"><strong><u><span style="font-family: arial,helvetica,sans-serif; color: rgb(255, 0, 0);"><span style="font-size: large;"></span></span></u></strong></h2>
+ <p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);"><strong style="font-size: large; color:black;">Aim : </strong>To study IEEE floating point represnetation of given floating point number and its implementation on FPGA</p>
+
+
+
+<p><span style="font-family: arial,helvetica,sans-serif; color: rgb(0, 0, 0);"><strong><span style="font-size: large;">Pre-Requisites:-</span></strong></span></p>
+
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">        Before perfromaning this expriment students should have knowledge of:</span></p>
+
+
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">         1. Digital system Fundamentals</span></p>
+
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">         2. IEEE Flaoting point number formats  </span></p>
+<p style="margin-bottom: 0cm;"> </p>
+
+<p><span style="font-family: arial,helvetica,sans-serif; color: rgb(0, 0, 0);"><strong><span style="font-size: large;">Objective:-</span></strong></span></p>
+
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">        Students will learn: </span></p>
+
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">         1. Floating point representation of given numbers  </span></p>
+
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">         2. FPGA Implementation of floating point numbers<br/>
+</span></p>
+
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">         3. Floating point arithmetic and its FPGA Implementation<br/>
+</span></p>
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">         4. Logarithmic Number System (LNS) - approach for floating point square root and division arithmetic<br/>
+</span></p>
+
+
+
+
+</span></p>
+
+
+
+<p><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(0, 0, 0);"><br/>
+</span></p></div></div>
+</section>
+<!-- Second section of the article-->
+<section id="experiment-article-section-2">
+<div class="icon" id="experiment-article-section-2-icon">
+<!-- Enclose the icon image of your lab. -->
+<img src="images/content_94.png"/>
+</div>
+<!-- The heading for the section can be enclosed in a 
+        div tag. -->
+<div class="heading" id="experiment-article-section-2-heading">
+          Pre Test
+        </div>
+<!-- Write the section content inside a paragraph 
+        element, we can also include images with &lt;img&gt; tag -->
+<div class="content" id="experiment-article-section-2-content"><div class="divQuiz"><div id="displayQuiz"><form id="form11" method="post" name="form11"><table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">1)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">What are the bit lengths of Sign, Exponent and Fraction respectively for Half Precision?</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans5998" name="ans0" type="radio" value="5998"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans5998">None</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans5999" name="ans0" type="radio" value="5999"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans5999">1-5-10</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6000" name="ans0" type="radio" value="6000"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6000">1-11-52</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6001" name="ans0" type="radio" value="6001"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6001">1-8-23</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint10" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">2)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">What are the bit lengths of Sign, Exponent and Fraction respectively for Double Precision?</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6002" name="ans1" type="radio" value="6002"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6002">1-5-10</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6003" name="ans1" type="radio" value="6003"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6003">1-8-23</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6004" name="ans1" type="radio" value="6004"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6004">1-11-52</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6005" name="ans1" type="radio" value="6005"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6005">None</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint11" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">3)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">	What is Half Precision of the example value 120.125(described in Theory) in Sign, Exponent and Fraction Form in Binary?</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6006" name="ans2" type="radio" value="6006"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6006">0-10101-1111000001</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6007" name="ans2" type="radio" value="6007"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6007">0-10101-1110000010</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6008" name="ans2" type="radio" value="6008"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6008">1-10101-1110000010</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6009" name="ans2" type="radio" value="6009"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6009">1-10101-1111000001</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint12" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+
+
+<input align="middle" id="loadTime" name="loadTime" type="hidden" value="1379688870/"/><br/><div style="padding-left:40px;"><input id="submit1" name="submit1" onclick="get_radio_value();" style="width:8%;" type="submit" value=" Submit "/>  <input id="cancel1" name="cancel1" style="width:8%;" type="reset" value=" Cancel "/></div></form><br/></div><br/></div></div>
+</section>
+<section id="experiment-article-section-3">
+<div class="icon" id="experiment-article-section-3-icon">
+<!-- Enclose the icon image of your lab. -->
+<img src="../images/objective.jpg"/>
+</div>
+<div class="heading" id="experiment-article-section-3-heading">
+          Theory
+        </div>
+<div class="content" id="experiment-article-section-3-content"><div class="divContent"><p></p>
+
+<p class="MsoNormal" style="line-height: 150%;"><b><span style='font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>Theory</span></b><b><span style='font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'> </span></b><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><br/>
+</span></p>
+
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style="">
+
+<h3><b>Introduction:</b></h3><br><br>
+
+Major real-life applications requires Floating Point arithmetic, but at the same time this approach is more complex for implementtaion on FPGAs. <br><br>
+
+<h3><b> IEEE 754 Standard for Floating Point Representation:</b></h3><br><br>
+
+The IEEE has standardized the computer representation for binary floating-point numbers in IEEE 754. This standard is followed by almost all modern machines.<br>
+
+IEEE floating point numbers have three basic components:<br>
+
+ 
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                         1. Sign,<br>
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                         2. Exponent, and<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                          3. Fraction/Mantissa<br>
+
+ 
+
+The basic structure of the same is;<br><br>
+
+<center><img src="images/1.png" style="width: 200px; height: 60px;"></center><br><br>
+
+ 
+
+This standard specifies the basic types of representation;<br>
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   1)  Half Precision (16-bits or 2-bytes)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    2)  Single Precision (32-bits or 4-bytes)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    3)  Double Precision (64-bits or 8-bytes)<br>
+
+Their corresponding bit-structures are;<br><br>
+
+<center><img src="images/2.png" style="width: 500px; height: 400px;"></center><br><br>
+
+The conversion from Decimal to Binary Floating point number is represented as:<br>
+(-1)<sup>sign bit</sup>  *  (1.fraction)  *  2<sup>excess - bias </sup><br><br>
+
+<h3><b> Sign</b></h3><br><br>
+
+0 -----Postive Number<br>
+
+1 -----Negetive Number<br>
+
+<h3><b> Bias</b></h3><br><br>
+
+127 ------for Single Precision<br>
+
+1023 -----for Double Precision  <br>
+
+ 
+
+The Fraction and Exponent can be understtod by the following example.<br><br>
+
+<h3><b> Conversion of Decimal to IEEE 754 Floating point representation</b></h3><br><br>
+For an example the decimal number 120.125<br>
+<b>Step 1:</b> <br>
+
+First take the interger part of the number i.e. 120 its binary equivalent is represented as,<br>
+
+120 (decimal) = 1111000 (binary)<br><br>
+
+<center><img src="images/3.png" style="width: 500px; height: 100px;"></center><br><br>
+
+<b>Step 2:</b> <br>
+
+Take the fraction part i.e. 0.125 its binary equivalent is represented as:<br>
+
+0.125 (decimal) = 0.001 (binary)<br><br>
+
+<center><img src="images/4.png"style="width: 500px; height: 100px;"></center><br><br>
+
+Thus, the given number 120.125 (decimal) is represented as--------> 1111000.001 (binary)<br>
+
+<b>Step 3:</b> <br>
+
+ 
+<h3><b>Fraction</b></h3><br>
+
+The converted binary number is normalized  by shifting the point to the left side untill it becomes 1.xxxxx  form. for a given number it is shifted by 6 times to get into this form<br><br>
+<center><img src="images/5.png"style="width: 500px; height: 300px;"></center><br><br>
+
+thus, 111000001 becomes Fraction part, which is placed in 22:0 (23 bits) bits of 32 bit Floating Point number,<br>
+<center><img src="images/6.png" style="width: 800px; height: 100px;"></center><br><br>
+
+<b>Step 4:</b><br>
+ 
+<h3><b>Exponent</b></h3><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To get exponent, Exponent = Excess - Bias,<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Excess=Exponent + Bias,<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Excess= 6 + 127 = 133 (decimal) = 10000101 (binary)<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Represnt this number in Exponent Bits 31:23 (8-bits)<br>
+
+ 
+<b>Step 5:</b><br>
+
+ 
+<h3><b>Sign</b></h3><br>
+
+ 
+
+This number is positive, so Sign bit 31 is 0.<br>
+
+ 
+
+Thus,finally the number represented in IEEE 754 Single Precision 32 bit format as follows,<br><br>
+
+<center><img src="images/7.png" style="width: 800px; height: 100px;"></center><br><br>
+
+  For Example,<br>
+ 
+
+In sample progrmam in Simulator converts the number 12.115.<br>
+
+
+As explained above, the converted 32-bit Single Precision output can be observed in timing digram as 1094833930 in decimal (Its hex equivelent  is 4141D70A).
+<br>
+The above procedure is same for Half Precision as well as Double Precision,except the bit lenghts of Exponent and Fraction changes s shown in Table-1.<br>
+
+
+</p>
+
+
+
+<p class="MsoNormal" style="line-height: 150%;"> </p>
+<p class="MsoNormal" style="line-height: 150%;"> </p>
+<p class="MsoNormal" style="line-height: 150%;"> </p>
+<p class="MsoNormal" style="line-height: 150%;"> </p></div></div>
+</section>
+
+<section id="experiment-article-section-4">
+<div class="icon" id="experiment-article-section-4-icon">
+<!-- Enclose the icon image of your lab.-->
+<img src="../images/simulation.jpg"/>
+</div>
+<div class="heading" id="experiment-article-section-4-heading">
+          Simulator
+        </div>
+<div class="content" id="experiment-article-section-4-content"><div class="divContent"><p><a href="Experiment1.html" target="_blank">Click here to enter FPGA-Verilog Simulator</a><br><br>
+
+
+ 
+</p></div></div>
+</section>
+
+
+
+
+
+<section id="experiment-article-section-5">
+<div class="icon" id="experiment-article-section-5-icon">
+<!-- Enclose the icon image of your lab.-->
+<img src="../images/manual.jpg"/>
+</div>
+<div class="heading" id="experiment-article-section-5-heading">
+          Procedure and Demo
+        </div>
+<div class="content" id="experiment-article-section-5-content"><div class="divContent">
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+
+ <strong>Steps to perform experiment:</strong>
+</p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+1.Start simulator by clicking on the <strong>Simulation </strong>tab.<br>
+2.Click on the link to <strong>enter the simulator.</strong><br>
+3.Login to your virtual Lab account.<br>
+4.First of all select a device from <strong>Device</strong> tab.(e.g. Device->Spartan 3E)<br>
+5.Then select an Experiment to perform from list.<br>
+6.After filling the necessary fields click on <strong>Submit</strong> button.<br>
+7.Here you will get answer to verify answer from simulator.<br>
+8.Now click on <strong>Generate Verilog Code</strong> button to generate the code.<br>
+9.Load the generated program by clicking on <strong>Load Program</strong> tab.<br>
+10Enter the file name without extension.<br>
+11.Click on <strong>Save On Server</strong> button to save program on your workspace at server.<br>
+12.Now click on <strong>Compile</strong> tab to compile your code on server.<br>
+13.After successful compilation, click on ok to generate the test bench.<br>
+14.Click on checkbox to select as output registers and select its type as output from list.<br>
+15.Enter data width (MSB=7 and LSB=0 for 8-bit output register).<br>
+16.Click on <strong>Submit</strong> button.<br>
+17.Click on <strong>Submit Test Bench </strong>button to submit your test bench.<br>
+18.Click on <strong>Close This Window</strong> button.<br>
+19Click on <strong>Execute</strong> tab which is under <strong>Compile</strong> tab.<br>
+20.Click on <strong>Timing Analysis</strong> tab to view Timing Analysis of input program.<br>
+21.For <strong>Resource Utilization Report</strong> click on Resource Utilizaion Report tab.<br>
+22.Your programs are saved on your workspace at server, which you can find under <strong>Your Programs</strong> tab.<br>
+23.If you want to write your own code Go to <strong>File-> New </strong>and repeate the procedure from step 10 to 21.<br>
+
+
+<br><br></p>
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><br>
+
+ <strong style="color:blue">Floating Point Arithmetic Operational Demo:</strong><br><br>
+ <strong style="color:black">This video explains the operational demo of the experiment  "Floating Point Arithmetic".</strong>
+<br><br>
+<p><iframe width="560" height="315" frameborder="0" allowfullscreen="" src="http://www.youtube.com/embed/Q049Q-jcWow"></iframe></p>
+ </p>
+<p class="MsoNormal" style="line-height: 150%;"><b><span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'></span></b><span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'></span></p>
+<p class="MsoNormal" style="line-height: 150%;"><span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'> </span></p>
+
+<p class="MsoNormal" style="line-height: 150%;"><span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'> </span></p></div></div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section id="experiment-article-section-6">
+<div class="icon" id="experiment-article-section-6-icon">
+<!-- Enclose the icon image of your lab.-->
+<img src="images/content_94.png"/>
+</div>
+<div class="heading" id="experiment-article-section-6-heading">
+          Post Test
+        </div>
+<div class="content" id="experiment-article-section-6-content"><div class="divQuiz"><div id="displayQuiz"><form id="form11" method="post" name="form11">
+<span id="question">The Double precision conversion of the number 178.63479 in Hexadecimal is <input type="text" class="fillInTheBlanks" value="" id="answerTxt26370" name="answerTxt26370"></span><br><br>
+
+<span id="question">The Half precision conversion of the number 215.48563 in Hexadecimal is <input type="text" class="fillInTheBlanks" value="" id="answerTxt26360" name="answerTxt26360"></span><br><br>
+
+<span id="question">The Single precision conversion of the number 12.115 in Hexadecimal is <input type="text" class="fillInTheBlanks" value="" id="answerTxt26350" name="answerTxt26350"></span><br><br>
+
+
+
+
+<input align="middle" id="loadTime" name="loadTime" type="hidden" value="1379688873/"/><br/><div style="padding-left:40px;"><input id="submit1" name="submit1" onclick="get_radio_value();" style="width:8%;" type="submit" value=" Submit "/>  <input id="cancel1" name="cancel1" style="width:8%;" type="reset" value=" Cancel "/></div></form><br/></div><br/></div></div>
+</section>
+
+<!--<section id="experiment-article-section-8">
+<div class="icon" id="experiment-article-section-8-icon">
+
+<img src="images/assign.png"/>
+</div>
+<div class="heading" id="experiment-article-section-8-heading">
+          Assignment
+        </div>
+<div class="content" id="experiment-article-section-8-content"><div class="divContent"><p>Write Assignment<br><br>
+
+
+ 
+</p></div></div>
+</section>
+
+<section id="experiment-article-section-7">
+<div class="icon" id="experiment-article-section-7-icon">
+
+<img src="images/content_6.png"/>
+</div>
+<div class="heading" id="experiment-article-section-7-heading">
+            Reference
+          </div>
+<div class="content" id="experiment-article-section-7-content"><div class="divContent"><h2 style="color: red;"><strong><u><span style="font-family: arial,helvetica,sans-serif; color: rgb(255, 0, 0);"><span style="font-size: large;">
+
+</span></span></u></strong></h2>
+
+<p class="MsoNormal" style="line-height: 150%; text-align: right;"><a href=""><span style="font-family: arial,helvetica,sans-serif; font-size: medium;"></span></a></p>
+
+<h1 style="margin-left: 0.75in; text-align: justify; text-indent: -0.25in; line-height: 150%; page-break-after: auto;"><span style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif"; color: black; font-weight: normal;'><span style=""><span style='font: 7pt "Times New Roman";'>    </span></span></span><span style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif"; color: black; font-weight: normal;'><br><br>
+
+</div></div>
+
+<h2><span style="color: rgb(51, 102, 255);">  </span>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="Word.Document" name="ProgId"/>
+<meta content="Microsoft Word 12" name="Generator"/>
+<meta content="Microsoft Word 12" name="Originator"/>
+<link href="file:///C:%5CUsers%5Cinstru%5CAppData%5CLocal%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_filelist.xml" rel="File-List"/>
+<link href="file:///C:%5CUsers%5Cinstru%5CAppData%5CLocal%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_themedata.thmx" rel="themeData"/>
+<link href="file:///C:%5CUsers%5Cinstru%5CAppData%5CLocal%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_colorschememapping.xml" rel="colorSchemeMapping"/>
+</h2>
+
+
+
+</section>-->
+
+</div>
+</article>
+</div>
+</body></html>

@@ -1,0 +1,452 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.--><!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit --><!DOCTYPE html>
+<html><head></head><body>
+<div id="experiment"> <!-- The Experiment Document Container-->
+<!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+<header class="default" id="experiment-header">
+<div class="logo" id="experiment-header-logo">
+<!-- Enclose the logo image of your lab or write it in 
+      text-->
+<img src="../images/logo.jpg"/>
+</div>
+<div class="heading" id="experiment-header-heading">
+<!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+<a href="../index.html">FPGA & Embedded Systems Lab</a>
+</div>
+<!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+</header>
+<!-- The lab article is the main content area where all the 
+  experiment content sits-->
+<article id="experiment-article">
+<!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+<div class="breadcrumb" id="experiment-article-breadcrumb">
+</div>
+<header class="heading" id="experiment-article-heading">Logarithmic Number System (LNS) Based Arithmetic Operations </header>
+<!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+<nav class="default" id="experiment-article-navigation">
+<ul id="experiment-article-navigation-menu">
+<!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          &lt;li&gt; tag as shown below-->
+</ul>
+</nav>
+<!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+<div id="experiment-article-sections">
+<!-- First section of the article-->
+<section id="experiment-article-section-1">
+<div class="icon" id="experiment-article-section-1-icon">
+<!-- Enclose the icon image of your lab -->
+<img src="../images/introduction.jpg"/>
+</div>
+<!-- The heading for the section can be enclosed in a 
+          div tag. -->
+<div class="heading" id="experiment-article-section-1-heading">
+            Aim
+          </div>
+<!-- Write the section content inside a paragraph 
+          element, You can also include images with &lt;img&gt; tag -->
+<div class="content" id="experiment-article-section-1-content"><div class="divContent"><h2 style="color: Red;"><strong><u><span style="font-family: arial,helvetica,sans-serif; color: rgb(255, 0, 0);"><span style="font-size: large;"></span></span></u></strong></h2>
+ <p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);"><strong style="font-size: large; color:black;">Aim : </strong> Introduction to Logarithmic Number System (LNS)</p>
+
+<p><span style="font-family: arial,helvetica,sans-serif; color: rgb(0, 0, 0);"><strong><span style="font-size: large;">Objective:-</span></strong></span></p>
+
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">      Students will learn following floating point arithmetic operations using Logrithmic Number System approach</span></p>
+
+
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">         1. Division  </span></p>
+
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">         2. Square root<br/>
+</span></p>
+
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">         3. Power of a number <br/>
+</span></p>
+
+
+
+
+
+</span></p>
+
+
+
+<p><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(0, 0, 0);"><br/>
+</span></p></div></div>
+</section>
+<!-- Second section of the article-->
+<section id="experiment-article-section-2">
+<div class="icon" id="experiment-article-section-2-icon">
+<!-- Enclose the icon image of your lab. -->
+<img src="images/content_94.png"/>
+</div>
+<!-- The heading for the section can be enclosed in a 
+        div tag. -->
+<div class="heading" id="experiment-article-section-2-heading">
+          Pre Test
+        </div>
+<!-- Write the section content inside a paragraph 
+        element, we can also include images with &lt;img&gt; tag -->
+<div class="content" id="experiment-article-section-2-content"><div class="divQuiz"><div id="displayQuiz"><form id="form11" method="post" name="form11"><table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">1)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">Which of the following statements is not correct?</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans5998" name="ans0" type="radio" value="5998"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans5998"> 	log2 2 = 1</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans5999" name="ans0" type="radio" value="5999"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans5999">log (2 + 22 + 33) = log 2 + log 22 + log 33</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6000" name="ans0" type="radio" value="6000"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6000">log (2.3 + 3) = log (2.3 x 3)</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6001" name="ans0" type="radio" value="6001"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6001">log10 1 = 0</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint10" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">2)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">If log 25.75 = 3.2484, then the value of log 5.25 is__</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6002" name="ans1" type="radio" value="6002"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6002">0.7201</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6003" name="ans1" type="radio" value="6003"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6003">1.6582</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6004" name="ans1" type="radio" value="6004"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6004">2.392</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6005" name="ans1" type="radio" value="6005"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6005">0.9254</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint11" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">3)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">	Find all real solutions to the logarithmic equation ln(x) = 12.25</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6006" name="ans2" type="radio" value="6006"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6006">No real solution</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6007" name="ans2" type="radio" value="6007"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6007">e^(12.25)</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6008" name="ans2" type="radio" value="6008"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6008">12.25</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6009" name="ans2" type="radio" value="6009"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6009">[12.25]^e</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint12" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">4)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">		Find all real solutions to the logarithmic equation ln⁡(x)+ln⁡(2)=33.5</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6037" name="ans3" type="radio" value="6037"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6037">〖33.5〗^e⁄2</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6036" name="ans3" type="radio" value="6036"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6036">e^33.5⁄(ln⁡(2))</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6035" name="ans3" type="radio" value="6035"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6035">e^(33.5)⁄2</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6034" name="ans3" type="radio" value="6034"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6034">33.5⁄(ln⁡(2))</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint13" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">5)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">			If log 3.6 = 0.5563 and log 8 = 0.9030, the value of log5 512 is__</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6051" name="ans3" type="radio" value="6051"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6051">2.967</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6052" name="ans3" type="radio" value="6052"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6052"> 3.876</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6053" name="ans3" type="radio" value="6053"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6053">3.912</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6054" name="ans3" type="radio" value="6054"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6054">2.870</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint13" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+
+<input align="middle" id="loadTime" name="loadTime" type="hidden" value="1379688870/"/><br/><div style="padding-left:40px;"><input id="submit1" name="submit1" onclick="get_radio_value();" style="width:8%;" type="submit" value=" Submit "/>  <input id="cancel1" name="cancel1" style="width:8%;" type="reset" value=" Cancel "/></div></form><br/></div><br/></div></div>
+</section>
+<section id="experiment-article-section-3">
+<div class="icon" id="experiment-article-section-3-icon">
+<!-- Enclose the icon image of your lab. -->
+<img src="../images/objective.jpg"/>
+</div>
+<div class="heading" id="experiment-article-section-3-heading">
+          Theory
+        </div>
+<div class="content" id="experiment-article-section-3-content"><div class="divContent"><p></p>
+
+<p class="MsoNormal" style="line-height: 150%;"><b><span style='font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>Theory</span></b><b><span style='font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'> </span></b><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><br/>
+</span></p>
+
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style="">
+
+<h3><b>Introduction:</b></h3>
+The dynamic range of floating point comes at the cost of lower precision and increased complexity over fixed point. Logarithmic number systems (LNS) provide a similar range and precision to floating point but may have some advantages in complexity over floating point for certain applications.<br>
+
+Given the same bit-widths, floating-point and LNS numbers provide similar representation ranges. However, the arithmetic implementations of the two are quite different. For floating point numbers, addition and subtraction are simple; multiplication and division are difficult, while exponential operations are even more difficult. In contrast, multiplication, division and exponential operations are easy for LNS, but addition and subtraction are extraordinarily difficult.<br>
+
+Suppose X and Y are the logarithmic forms of numbers A and B (A > B). The basic LNS arithmetic operations of these two numbers are as follows:<br><br>
+
+<center><img src="images/1.png" alt="" style="width: 400px; height: 400px;" ><br></center><br><br>
+
+Thus, we can perform LNS MUL/DIV with fixed-point addition or subtraction, but for LNS ADD/SUB we need to evaluate  f1(x)=log<sub>2</sub>(1+2<sup>a</sup>) and f2(x)=log<sub>2</sub>(2<sup>b</sup>-1), which are non-linear and difficult to evaluate.<br><br>
+
+  <b> Representation of LNS:</b><br>
+
+ Logarithmic numbers can be viewed as a specific case of floating point numbers where the mantissa is always 1, and the exponent has a fractional part. The number A has a value of<br><br>
+ <center><img src="images/2.png" alt="" style="width: 200px; height: 100px;"><br></center><br><br>
+ 
+ where, S<sub>A</sub> is the sign bit and E<sub>A</sub> is a fixed point number. The sign bit signifies the sign of the whole number. E<sub>A</sub> is a 2’s complement fixed point number where the negative numbers represent values less than 1.0. <br><br>
+ 
+
+<b>Range of LNS:</b><br><br>
+
+<center><b> Single Precision: </b> <img src="images/3.png" style="width: 70px; height: 50px;">  to  <img src="images/4.png" style="width: 70px; height: 50px;"></center><br><br>
+<center><b> Double Precision: </b> <img src="images/5.png" style="width: 70px; height: 50px;">  to  <img src="images/6.png"style="width: 70px; height: 50px;"></center><br><br>
+<b>Log of A Number:</b><br><br>
+
+ 
+
+The conversion from floating point to LNS involves two steps that can be done in parallel. Input floating point contains three parts i.e. S, E, M and output LNS gives two parts i.e. E, M. Let the floating point number A can be defined as<br>
+<center><img src="images/7.png" alt=""style="width: 200px; height: 80px;" ><br></center><br><br>
+ Steps to convert floating point number in to LNS<br><br>
+ 
+  <b>Step1:</b> Take the log of number; log<sub>2</sub> (A) = log<sub>2</sub> (2<sup>E</sup> x M)<br>
+
+ <b>Step2:</b> By multiplication rule of log; log<sub>2</sub> (A) = log<sub>2</sub> (2<sup>E</sup>) + log<sub>2</sub>(M), take E without bias<br>
+
+ <b>Step3:</b> By power rule of log;  log<sub>2</sub> (A) = E x log<sub>2</sub> (2) + log<sub>2</sub>(M) <br>
+
+ <b>Step4:</b> As  log<sub>2</sub> (2) = 1;  log<sub>2</sub> (A) = 1 + log<sub>2</sub>(M); take mantissa with hidden bit `1' i.e. 1.M<br>
+
+ <b>Step5:</b> Find log<sub>2</sub>(M) from <b>Look-up table</b> (for  log<sub>2</sub>  of numbers between 0-1)<br>
+
+ <b>Step6:</b> Represent the log of number as addition of E +log<sub>2</sub>(M) as  log<sub>2</sub> (A) = E + log<sub>2</sub>(M) <br><br>
+ 
+ <center><img src="images/8.jpg" style="width: 500px; height: 500px;"><br> Fig. Flow chart to find log of a given number</center><br><br>
+  <b>Example 1: To calculate log of floating point number A = 32’h41CE0000 i.e. 25.75</b><br><br>
+<b>Step 1:</b> log<sub>2</sub>  (32'h41CE0000) = log<sub>2</sub>  (24x1.609375)<br>
+
+<b>Step 2:</b> log<sub>2</sub>  (32'h41CE0000) = log<sub>2</sub>  (24) + log<sub>2</sub> (1.609375)<br>
+
+<b>Step 3:</b> log<sub>2</sub>  (32'h41CE0000) = 4 x log<sub>2</sub>  (2) + log<sub>2</sub> (1.609375) <br>
+
+<b>Step 4:</b> log<sub>2</sub>  (32'h41CE0000) = 4 + log<sub>2</sub> (1.609375) <br>
+
+<b>Step 5:</b> log<sub>2</sub> (1.609375) = 0.68650052718 from Look up Table of log<sub>2</sub> <br>
+
+<b>Step 6:</b> log<sub>2</sub>  (32'h41CE0000) = 4 + 0.68650052718 = 4.68650052718<br><br>
+
+<b>Antilog of A Number:</b><br><br>
+
+ 
+
+ The anti-log is simply the inverse log calculation. The anti-logarithm is defined as,<br><br>
+
+ 
+
+    <center> antilog<sub>2</sub>(A)=2<sup>A</sup><br><br></center>
+																				   
+
+ where, A is a consist of exponent (E) and mantissa (M) part i.e. A=E+M<br>
+
+ Steps to find the antilog of a log number is given below<br><br>
+ 
+ <b>Step1:</b> antilog<sub>2</sub>(A)=2<sup>A</sup><br>
+
+ <b>Step2:</b>  antilog<sub>2</sub>(E+M)=2<sup>(E+M)</sup><br>
+
+ <b>Step3:</b>  antilog<sub>2</sub>(E+M)=2<sup>(E)</sup> x 2<sup>(M)</sup>; find antilog of M from <b>Look-up table</b> (antilog of number between 1 to 2)<br><br>
+ 
+ <b> Example 2: To calculate antilog of fixed point log number A = 2.5</b><br><br>
+
+ 
+
+<b>Step 1:</b> antilog<sub>2</sub>(2.5)=2<sup>2.5</sup><br>
+
+<b>Step 2:</b> antilog<sub>2</sub>(2+0.5)=2<sup>(2+0.5)</sup><br>
+
+<b>Step 3:</b> antilog<sub>2</sub>(2+0.5)=2<sup>2</sup> x 2<sup>0.5</sup> <br>
+
+<b>Step 4:</b> antilog<sub>2</sub>(2+0.5)=4 x antilog<sub>2</sub>(0.5)<br> 
+
+<b>Step 5:</b> antilog<sub>2</sub>(0.5) = 1.4142135624 from Look up Table of antilog<sub>2</sub><br>
+
+<b>Step 6:</b> antilog<sub>2</sub>(2.5) = 4 x 1.4142135624 = 5.6568542495<br><br>
+
+<b>Division:</b><br><br>
+
+ 
+
+ Division in LNS becomes subtraction due to the logarithmic property given below<br>
+
+ 
+
+ <center> log<sub>2</sub>(A ÷ B) = log<sub>2</sub>(A) - log<sub>2</sub>(B)</center><br>
+
+ 
+
+ Consider A & B are the two floating point numbers. Steps to compute division of A & B are:<br>
+
+ 
+
+  <b>Step1:</b> Find log<sub>2</sub>(A)<br>
+
+  <b>Step2:</b> Find log<sub>2</sub>(B)<br>
+
+  <b>Step3:</b> Find C=log<sub>2</sub>(A) -  log<sub>2</sub>(B)<br>
+
+  <b>Step4:</b> Find antilog<sub>2</sub>(C)<br>
+
+  <b>Step5:</b> Give the sign of result as XOR between A & B i.e. A  B<br>
+
+  <b>Step6:</b> Convert answer in to floating point number using fixed to floating point converter<br><br>
+  <b> Square Root:</b><br><br>
+
+  Let A be the number in oating point format. Steps to find square root of number A:<br>
+
+  <b>Step1:</b> Find log<sub>2</sub>(A)<br>
+
+  <b>Step2:</b> Right shift log of number calculated in step 1 i.e. C=log<sub>2</sub>(A) >> 1<br>
+
+  <b>Step3:</b> Find antilog<sub>2</sub>(C)<br>
+
+  <b>Step4:</b> Convert Antilog to floating point using fixed to floating point converter<br><br>
+ <center><img src="images/9.jpg" style="width: 500px; height: 500px;"><br> Fig. Flow Chart of LNS Division & Square Root Algorithm</center><br><br> 
+
+
+
+
+ 
+ 
+
+</span></p>
+
+
+
+<p class="MsoNormal" style="line-height: 150%;"> </p>
+<p class="MsoNormal" style="line-height: 150%;"> </p>
+<p class="MsoNormal" style="line-height: 150%;"> </p>
+<p class="MsoNormal" style="line-height: 150%;"> </p></div></div>
+</section>
+
+
+<section id="experiment-article-section-4">
+<div class="icon" id="experiment-article-section-4-icon">
+<!-- Enclose the icon image of your lab.-->
+<img src="../images/simulation.jpg"/>
+</div>
+<div class="heading" id="experiment-article-section-4-heading">
+          Simulator
+        </div>
+<div class="content" id="experiment-article-section-4-content"><div class="divContent"><p><a href="Experiment1.html" target="_blank">Click here to enter FPGA-Verilog Simulator</a><br><br>
+
+
+ 
+</p></div></div>
+</section>
+
+
+<section id="experiment-article-section-5">
+<div class="icon" id="experiment-article-section-5-icon">
+<!-- Enclose the icon image of your lab.-->
+<img src="../images/manual.jpg"/>
+</div>
+<div class="heading" id="experiment-article-section-5-heading">
+          Procedure and Demo
+        </div>
+<div class="content" id="experiment-article-section-5-content"><div class="divContent">
+
+
+<p class="MsoNormal" style="line-height: 150%;"><b><span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'> </span></b>
+
+<h3><b>Steps to perform experiment:</b></h3><br><br>
+
+
+    1)&nbsp;&nbsp;Start simulator by clicking on the <b>Simulation</b> tab.<br>
+
+    2)&nbsp;&nbsp;Click on the link to <b>enter the simulator.</b><br>
+
+    3)&nbsp;&nbsp;Login to your virtual Lab account.<br>
+
+    4)&nbsp;&nbsp;First of all select a <b>device</b> from Device tab.(e.g. Device->Spartan 3E)<br>
+
+    5)&nbsp;&nbsp;Then select an Experiment to perform from list.<br>
+
+    6)&nbsp;&nbsp;After filling the necessary fields click on <b>Submit</b> button.<br>
+
+    7)&nbsp;&nbsp;Here you will get answer to verify answer from simulator.<br>
+
+    8)&nbsp;&nbsp;Now click on <b>Generate Verilog Code</b> button to generate the code.<br>
+
+    9)&nbsp;&nbsp;Load the generated program by clicking on <b>Load Program</b> tab.<br>
+
+    10)&nbsp;&nbsp;Enter the file name without extension.<br>
+
+    11)&nbsp;&nbsp;Click on <b>Save On Server</b> button to save program on your workspace at server.<br>
+
+    12)&nbsp;&nbsp;Now click on <b>Compile</b> tab to compile your code on server.<br>
+
+    13)&nbsp;&nbsp;After successful compilation, click on ok to generate the test bench.<br>
+
+    14)&nbsp;&nbsp;Click on checkbox to select as output registers and select its type as output from list.<br>
+
+    15)&nbsp;&nbsp;Enter data width (MSB=7 and LSB=0 for 8-bit output register).<br>
+
+    16)&nbsp;&nbsp;Click on <b>Submit</b> button.<br>
+
+    17)&nbsp;&nbsp;Click on <b>Submit Test Bench</b> button to submit your test bench.<br>
+
+    18)&nbsp;&nbsp;Click on <b>Close This Window</b> button.<br>
+
+    19)&nbsp;&nbsp;Click on <b>Execute</b> tab which is under <b>Compile</b> tab.<br>
+
+    20)&nbsp;&nbsp;Click on <b>Timing Analysis</b> tab to view Timing Analysis of input program.<br>
+
+    21)&nbsp;&nbsp;For <b>Resource Utilization Report</b> click on Resource Utilizaion Report tab.<br>
+
+    22)&nbsp;&nbsp;Your programs are saved on your workspace at server, which you can find under <b>Your Programs</b> tab.<br>
+
+    23)&nbsp;&nbsp;If you want to write your own code Go to <b>File-> New</b> and repeate the procedure from step 10 to 21.<br>
+
+ </p>
+
+
+<p class="MsoNormal" style="line-height: 150%;"><b><span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'></span></b><span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'></span></p>
+<p class="MsoNormal" style="line-height: 150%;"><span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'> </span></p>
+
+<p class="MsoNormal" style="line-height: 150%;"><span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'> </span></p></div></div>
+</section>
+
+
+
+
+
+<!--<section id="experiment-article-section-6">
+<div class="icon" id="experiment-article-section-6-icon">
+
+<img src="images/content_94.png"/>
+</div>
+<div class="heading" id="experiment-article-section-6-heading">
+          Post Test
+        </div>
+<div class="content" id="experiment-article-section-6-content"><div class="divQuiz"><div id="displayQuiz"><form id="form11" method="post" name="form11">
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">1)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">A DC shunt motor works on the AC mains</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6058" name="ans0" type="radio" value="6058"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6058">unsatisfactorily</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6057" name="ans0" type="radio" value="6057"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6057">satisfactorily</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6059" name="ans0" type="radio" value="6059"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6059">not at all</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6060" name="ans0" type="radio" value="6060"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6060">none of the above</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint10" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">2)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">	In a DC Motor, unidirectional torque is generated with the help of</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6061" name="ans1" type="radio" value="6061"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6061">brushes</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6062" name="ans1" type="radio" value="6062"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6062">commutator</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6063" name="ans1" type="radio" value="6063"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6063">end plates</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6064" name="ans1" type="radio" value="6064"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6064">both(a) & (b)</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint11" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">3)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">	The counter emf of a DC motor</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6065" name="ans2" type="radio" value="6065"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6065">Often exceeds the supply voltage</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6066" name="ans2" type="radio" value="6066"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6066">aids the applied voltage</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6067" name="ans2" type="radio" value="6067"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6067">helps in energy conservation(by controlling current input)</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6068" name="ans2" type="radio" value="6068"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6068">regulates the armature voltage</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint12" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">4)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">If pole flux of DC motor approaches to zero its speed will</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6069" name="ans3" type="radio" value="6069"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6069">approach infinity</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6070" name="ans3" type="radio" value="6070"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6070">approach zero</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6071" name="ans3" type="radio" value="6071"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6071"> no change due to corresponding change in back emf</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6072" name="ans3" type="radio" value="6072"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6072">approach a stable value between zero and infinity</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint13" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+
+<input align="middle" id="loadTime" name="loadTime" type="hidden" value="1379688873/"/><br/><div style="padding-left:40px;"><input id="submit1" name="submit1" onclick="get_radio_value();" style="width:8%;" type="submit" value=" Submit "/>  <input id="cancel1" name="cancel1" style="width:8%;" type="reset" value=" Cancel "/></div></form><br/></div><br/></div></div>
+</section>-->
+
+<section id="experiment-article-section-8">
+<div class="icon" id="experiment-article-section-8-icon">
+<!-- Enclose the icon image of your lab.-->
+<img src="images/assign.png"/>
+</div>
+<div class="heading" id="experiment-article-section-8-heading">
+          Assignment
+        </div>
+<div class="content" id="experiment-article-section-8-content"><div class="divContent"><p>
+
+ 1. Find the log of number 56.56 using base 2<br>
+2. Find the square root of number 89.89<br>
+3. Perform the division of -125 and +5.6 using LNS and Virtex II(lvds) devise<br>
+4. Perform the multiplication of 0.125 and -13.25 using LNS and Virtex 4(XC4VSx35-10ff668) device.<br>
+5. Find the solution of <br><img src="images/10.png"><br>
+
+
+ 
+</p></div></div>
+</section>
+
+<section id="experiment-article-section-7">
+<div class="icon" id="experiment-article-section-7-icon">
+<!-- Enclose the icon image of your lab.-->
+<img src="images/content_6.png"/>
+</div>
+<div class="heading" id="experiment-article-section-7-heading">
+            Reference
+          </div>
+<div class="content" id="experiment-article-section-7-content"><div class="divContent"><h2 style="color: red;"><strong><u><span style="font-family: arial,helvetica,sans-serif; color: rgb(255, 0, 0);"><span style="font-size: large;">
+
+</span></span></u></strong></h2>
+
+<p class="MsoNormal" style="line-height: 150%; text-align: right;"><a href=""><span style="font-family: arial,helvetica,sans-serif; font-size: medium;"></span></a></p>
+
+<h1 style="margin-left: 0.75in; text-align: justify; text-indent: -0.25in; line-height: 150%; page-break-after: auto;"><span style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif"; color: black; font-weight: normal;'><span style=""><span style='font: 7pt "Times New Roman";'>    </span></span></span><span style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif"; color: black; font-weight: normal;'><br>1.Nikolaos Alachiotis, Alexandros Stamatakis, “Efficient Floating-Point Logarithm Unit for FPGAs”.<br>
+2.  Michael Haselman, Keith Underwood, “A Comparison of Floating Point and Logarithmic Number Systems on FPGAs”.
+<br>
+
+</div></div>
+
+<h2><span style="color: rgb(51, 102, 255);">  </span>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="Word.Document" name="ProgId"/>
+<meta content="Microsoft Word 12" name="Generator"/>
+<meta content="Microsoft Word 12" name="Originator"/>
+<link href="file:///C:%5CUsers%5Cinstru%5CAppData%5CLocal%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_filelist.xml" rel="File-List"/>
+<link href="file:///C:%5CUsers%5Cinstru%5CAppData%5CLocal%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_themedata.thmx" rel="themeData"/>
+<link href="file:///C:%5CUsers%5Cinstru%5CAppData%5CLocal%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_colorschememapping.xml" rel="colorSchemeMapping"/>
+</h2>
+
+
+
+</section>
+
+</div>
+</article>
+</div>
+</body></html>

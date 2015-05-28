@@ -1,0 +1,179 @@
+
+<html> 
+    <head> 
+        <title>WaveDrom Tutorial</title> 
+        <link rel="shortcut icon" href="images/favicon.ico"/> 
+        <script type="text/javascript" src="WaveDrom.js"></script> 
+    </head> 
+
+    <body onload="WaveDrom.ProcessAll('skins/default.svg')"> 
+
+
+
+        <h2>Step 1. The clock</h2> 
+
+        Clock is the special signal. It changes twice per cycle and can have positive or negative polarity.
+        The following WaveJSON represent two clock signals.
+
+        <pre class="WaveDrom"> 
+{ "signal" : [
+  { "name": "pclk", "wave": "n......" },
+  { "name": "nclk", "wave": "n....." },
+  { "name": "Pclk", "wave": "P....." },
+  { "name": "Nclk", "wave": "N....." }
+]}
+        </pre> 
+
+        <script type="WaveDrom"> 
+            { "signal" : [
+            { "name": "pclk", "wave": "" },
+            { "name": "nclk", "wave": "n....." },
+            { "name": "Pclk", "wave": "P....." },
+            { "name": "Nclk", "wave": "N....." }
+            ]}
+        </script> 
+
+
+        <h2>Step 2. Wires</h2> 
+
+        <pre> 
+{ "signal" : [
+  { "name": "clk",  "wave": "P......" },
+  { "name": "bus",  "wave": "x.==.=x", "data": ["head", "body", "tail", "data"] },
+  { "name": "wire", "wave": "0.1..0." }
+]}
+        </pre> 
+
+        <script type="WaveDrom"> 
+            { "signal" : [
+            { "name": "clk",  "wave": "P......" },
+            { "name": "bus",  "wave": "x.==.=x", "data": ["head", "body", "tail", "data"] },
+            { "name": "wire", "wave": "0.1..0." }
+            ]}
+        </script> 
+
+        <h2>Step 3. Spacers and Gaps</h2> 
+
+        <pre> 
+{ "signal" : [
+  { "name": "clk",         "wave": "p.....|..." },
+  { "name": "Data",        "wave": "x.345x|=.x", "data": ["head", "body", "tail", "data"] },
+  { "name": "Request",     "wave": "0.1..0|1.0" },
+  {},
+  { "name": "Acknowledge", "wave": "1.....|01." }
+]}
+        </pre> 
+
+        <script type="WaveDrom"> 
+            { "signal" : [
+            { "name": "clk",         "wave": "p.....|..." },
+            { "name": "Data",        "wave": "x.345x|=.x", "data": ["head", "body", "tail", "data"] },
+            { "name": "Request",     "wave": "0.1..0|1.0" },
+            {},
+            { "name": "Acknowledge", "wave": "1.....|01." }
+            ]}
+        </script> 
+
+        <h2>Step 4. DDR Examples</h2> 
+
+        <h3>DDR Read transaction</h3> 
+
+        <pre> 
+{ "signal" : [
+  { "name": "CK",  "wave": "0.1.0.1.0.1.0.1.0.1.0.1.0.1."},
+  { "name": "CMD", "wave": "x3.x.=.x.4.x.=.x.=.x.=.x.=.x", "data" : ["RAS", "NOP", "CAS", "NOP", "NOP", "NOP", "NOP"] },
+  { "name": "ADDR","wave": "x=.x.....=.x................", "data" : ["Bank ROW", "Bank COL"] },
+  { "name": "DQS", "wave": "z.............0...1.0.1.0.z." },
+  { "name": "DQ",  "wave": "z.................5.5.5.5.z.", "data" : ["D0","D1","D2","D3"] }
+]}
+        </pre> 
+
+        <script type="WaveDrom"> 
+            { "signal" : [
+            { "name": "CK",  "wave": "0.1.0.1.0.1.0.1.0.1.0.1.0.1."},
+            { "name": "CMD", "wave": "x3.x.=.x.4.x.=.x.=.x.=.x.=.x", "data" : ["RAS", "NOP", "CAS", "NOP", "NOP", "NOP", "NOP"] },
+            { "name": "ADDR","wave": "x=.x.....=.x................", "data" : ["Bank ROW", "Bank COL"] },
+            { "name": "DQS", "wave": "z.............0...1.0.1.0.z." },
+            { "name": "DQ",  "wave": "z.................5.5.5.5.z.", "data" : ["D0","D1","D2","D3"] }
+            ]}
+        </script> 
+
+        <h3>DDR Latency digram</h3> 
+
+        <pre> 
+{ "signal" : [
+  { "name": "CK",           "wave": "0.1.0.1.0.1.0.1.0.1.0.1.0.1.0.1.0"},
+  { "name": "CMD",          "wave": "x4.x.............................", "data" : ["CAS"]},
+  { "name": "DQ Latency=2", "wave": "z.........5.5.5.5.z..............", "data" : ["D0", "D1", "D2", "D3"] },
+  { "name": "DQ Latency=3", "wave": "z.............5.5.5.5.z..........", "data" : ["D0", "D1", "D2", "D3"] },
+  { "name": "DQ Latency=4", "wave": "z.................5.5.5.5.z......", "data" : ["D0", "D1", "D2", "D3"] },
+  { "name": "DQ Latency=5", "wave": "z.....................5.5.5.5.z..", "data" : ["D0", "D1", "D2", "D3"] }
+]}
+        </pre> 
+
+        <script type="WaveDrom"> 
+            { "signal" : [
+            { "name": "CK",           "wave": "0.1.0.1.0.1.0.1.0.1.0.1.0.1.0.1.0"},
+            { "name": "CMD",          "wave": "x4.x.............................", "data" : ["CAS"]},
+            { "name": "DQ Latency=2", "wave": "z.........5.5.5.5.z..............", "data" : ["D0", "D1", "D2", "D3"] },
+            { "name": "DQ Latency=3", "wave": "z.............5.5.5.5.z..........", "data" : ["D0", "D1", "D2", "D3"] },
+            { "name": "DQ Latency=4", "wave": "z.................5.5.5.5.z......", "data" : ["D0", "D1", "D2", "D3"] },
+            { "name": "DQ Latency=5", "wave": "z.....................5.5.5.5.z..", "data" : ["D0", "D1", "D2", "D3"] }
+            ]}
+        </script> 
+
+        <h2>Step 5. Config</h2> 
+
+        <h3>hscale</h3> 
+
+        <pre> 
+{ "signal" : [
+  { "name": "clk",         "wave": "p...." },
+  { "name": "Data",        "wave": "x345x", "data": ["head", "body", "tail"] },
+  { "name": "Request",     "wave": "01..0" }
+],
+  "config" : { "hscale" : # }
+}
+        </pre> 
+
+        <h3>hscale = 1 (default)</h3> 
+
+        <div> 
+            <script type="WaveDrom"> 
+                { "signal" : [
+                { "name": "clk",         "wave": "p...." },
+                { "name": "Data",        "wave": "x345x", "data": ["head", "body", "tail"] },
+                { "name": "Request",     "wave": "01..0" }
+                ]}
+            </script> 
+        </div> 
+
+        <h3>hscale = 2</h3> 
+
+        <div><div> 
+                <script type="WaveDrom"> 
+                    { "signal" : [
+                    { "name": "clk",         "wave": "p...." },
+                    { "name": "Data",        "wave": "x345x", "data": ["head", "body", "tail"] },
+                    { "name": "Request",     "wave": "01..0" }
+                    ],
+                    "config" : { "hscale" : 2 }
+                    }
+                </script> 
+            </div></div> 
+
+        <h3>hscale = 3</h3> 
+
+        <div><div><div> 
+                    <script type="WaveDrom"> 
+                        { "signal" : [
+                        { "name": "clk",         "wave": "p...." },
+                        { "name": "Data",        "wave": "x345x", "data": ["head", "body", "tail"] },
+                        { "name": "Request",     "wave": "01..0" }
+                        ],
+                        "config" : { "hscale" : 3 }
+                        }
+                    </script> 
+                </div></div></div> 
+    </body> 
+</html> 

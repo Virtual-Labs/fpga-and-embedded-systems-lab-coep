@@ -1,0 +1,873 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.--><!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit --><!DOCTYPE html>
+<html><head></head><body>
+<div id="experiment"> <!-- The Experiment Document Container-->
+<!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+<header class="default" id="experiment-header">
+<div class="logo" id="experiment-header-logo">
+<!-- Enclose the logo image of your lab or write it in 
+      text-->
+<img src="../images/logo.jpg"/>
+</div>
+<div class="heading" id="experiment-header-heading">
+<!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+<a href="../index.html">FPGA & Embedded Systems Lab</a>
+</div>
+<!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+</header>
+<!-- The lab article is the main content area where all the 
+  experiment content sits-->
+<article id="experiment-article">
+<!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+<div class="breadcrumb" id="experiment-article-breadcrumb">
+</div>
+<header class="heading" id="experiment-article-heading"> 	
+Fixed Point Arithmetic Operations and Logical Operators</header>
+<!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+<nav class="default" id="experiment-article-navigation">
+<ul id="experiment-article-navigation-menu">
+<!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          &lt;li&gt; tag as shown below-->
+</ul>
+</nav>
+<!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+<div id="experiment-article-sections">
+<!-- First section of the article-->
+<section id="experiment-article-section-1">
+<div class="icon" id="experiment-article-section-1-icon">
+<!-- Enclose the icon image of your lab -->
+<img src="../images/introduction.jpg"/>
+</div>
+<!-- The heading for the section can be enclosed in a 
+          div tag. -->
+<div class="heading" id="experiment-article-section-1-heading">
+            Aim
+          </div>
+<!-- Write the section content inside a paragraph 
+          element, You can also include images with &lt;img&gt; tag -->
+<div class="content" id="experiment-article-section-1-content"><div class="divContent"><h2 style="color: Red;"><strong><u><span style="font-family: arial,helvetica,sans-serif; color: rgb(255, 0, 0);"><span style="font-size: large;"></span></span></u></strong></h2>
+ <p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);"><strong style="font-size: large; color:black;">Aim : </strong>To understand verilog syntax for basic arithmetic and logical operations</p><br>
+<p class="MsoNormal" style="line-height: 150%; text-align: right;"><a href="http://coep.vlab.co.in/?sub=33&amp;brch=91"><span style="font-family: arial,helvetica,sans-serif; font-size: medium;"></span></a></p>
+<p><span style="font-family: arial,helvetica,sans-serif; color: rgb(0, 0, 0);"><strong><span style="font-size: large;">Pre-Requisites</span></strong></span></p>
+
+
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);"> Before performing the experiment the user should know:<br>       &nbsp; 1. Knowledge of digital fundamentals </span></p>
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">         2. Fundamental of Verilog syntax</span></p><br>
+
+<p><span style="font-family: arial,helvetica,sans-serif; color: rgb(0, 0, 0);"><strong><span style="font-size: large;">Objective:-</span></strong></span></p>
+
+<p><!-- p { margin-bottom: 0.21cm; } --></p>
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">The students will learn verilog syntax of<br>        1.Basic arithmetic and logical operations </span></p>
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">         2.Bitwise operations </span></p>
+<p style="margin-bottom: 0cm;"><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(51, 51, 51);">         2.Priority of arithmetic operations </span></p>
+
+
+
+
+<p><span style="font-family: arial,helvetica,sans-serif; font-size: medium; color: rgb(0, 0, 0);"><br/>
+</span></p></div></div>
+</section>
+<!-- Second section of the article-->
+<section id="experiment-article-section-2">
+<div class="icon" id="experiment-article-section-2-icon">
+<!-- Enclose the icon image of your lab. -->
+<img src="images/content_94.png"/>
+</div>
+<!-- The heading for the section can be enclosed in a 
+        div tag. -->
+<div class="heading" id="experiment-article-section-2-heading">
+          Pre Test
+        </div>
+<!-- Write the section content inside a paragraph 
+        element, we can also include images with &lt;img&gt; tag -->
+<div class="content" id="experiment-article-section-2-content"><div class="divQuiz"><div id="displayQuiz"><form id="form11" method="post" name="form11"><table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">1)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">	A number is multiplied by 8 and this answer is added to 99 and the final answer is 171. What is the original number?</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans5998" name="ans0" type="radio" value="5998"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans5998">11</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans5999" name="ans0" type="radio" value="5999"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans5999">7</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6000" name="ans0" type="radio" value="6000"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6000">9</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6001" name="ans0" type="radio" value="6001"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6001">8</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint10" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">2)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">A number is divided by 6. The quotient is 3 and the remainder is 2. What is the number?</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6002" name="ans1" type="radio" value="6002"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6002">15</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6003" name="ans1" type="radio" value="6003"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6003">20</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6004" name="ans1" type="radio" value="6004"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6004">12</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6005" name="ans1" type="radio" value="6005"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6005">22</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint11" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">3)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">Which sentence makes this sentences true? 401 - 96 > 48 + ?</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6006" name="ans2" type="radio" value="6006"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6006">256</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6007" name="ans2" type="radio" value="6007"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6007">260</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6008" name="ans2" type="radio" value="6008"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6008">258</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6009" name="ans2" type="radio" value="6009"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6009">262</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint12" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">4)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">Which sign makes the sentences true? 12 - 5 ? 8</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6037" name="ans3" type="radio" value="6037"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6037">></label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6036" name="ans3" type="radio" value="6036"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6036"><</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6035" name="ans3" type="radio" value="6035"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6035">=</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6034" name="ans3" type="radio" value="6034"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6034">>=</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint13" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">5)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">Evaluate: (-404+4) * |-9| / -4 = ?</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6033" name="ans3" type="radio" value="6033"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6033">900</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6032" name="ans3" type="radio" value="6032"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6032">945</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6031" name="ans3" type="radio" value="6031"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6031">925</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6030" name="ans3" type="radio" value="6030"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6030">904</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint13" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+
+<input align="middle" id="loadTime" name="loadTime" type="hidden" value="1379688870/"/><br/><div style="padding-left:40px;"><input id="submit1" name="submit1" onclick="get_radio_value();" style="width:8%;" type="submit" value=" Submit "/>  <input id="cancel1" name="cancel1" style="width:8%;" type="reset" value=" Cancel "/></div></form><br/></div><br/></div></div>
+</section>
+<section id="experiment-article-section-3">
+<div class="icon" id="experiment-article-section-3-icon">
+<!-- Enclose the icon image of your lab. -->
+<img src="../images/objective.jpg"/>
+</div>
+<div class="heading" id="experiment-article-section-3-heading">
+          Theory
+        </div>
+<div class="content" id="experiment-article-section-3-content"><div class="divContent"><p></p>
+
+<p class="MsoNormal" style="line-height: 150%;"><b><span style='font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'>Theory</span></b><b><span style='font-size: 12pt; line-height: 150%; font-family: "Verdana","sans-serif"; color: black;'> </span></b><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><br/>
+</span></p>
+<p class="MsoNormal" style="line-height: 150%; text-align: right;"><a href="http://coep.vlab.co.in/?sub=33&amp;brch=91"><span style="font-family: arial,helvetica,sans-serif; font-size: medium;"></span></a></p>
+
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'><span style=""><strong>Arithmetic operators:</strong><br><br>
+The + and - can be used as either unary (-a) or binary (a-b) operators. The modulus operator is not allowed for real data type variables. Other arithmetic operators can be used with all data types. For the modulus operator, the result takes the sign of the first operand. Following table gives the list of Arithmetic operators.<br><br>
+<table cellspacing="1" cellpadding="1" border="1" align="center" style="width: 236px; height: 153px;">
+    <tbody>
+        <tr>
+            <td style="text-align: justify; ">&nbsp;<span style="color: rgb(255, 0, 0);"><b><span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">&nbsp; Description&nbsp;</span></b></span></td>
+            <td style="text-align: justify; ">&nbsp;<span style="color: rgb(255, 0, 0);"><b><span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Operator</span></b></span></td>
+        </tr>
+        <tr>
+            <td style="text-align: justify; ">&nbsp; &nbsp; <span style="font-size:
+            12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-fareast-language:EN-IN">Addition</span></td>
+            <td style="text-align: justify; ">&nbsp;&nbsp;&nbsp;&nbsp; a + b</td>
+        </tr>
+        <tr>
+            <td style="text-align: justify; ">&nbsp;&nbsp;&nbsp; <span style="font-size:
+            12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-fareast-language:EN-IN">Subtraction</span></td>
+            <td style="text-align: justify; ">&nbsp; &nbsp; &nbsp; a - b</td>
+        </tr>
+        <tr>
+            <td style="text-align: justify; ">&nbsp;<span style="font-size:
+            12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-fareast-language:EN-IN">&nbsp;&nbsp; Multiplication</span></td>
+            <td style="text-align: justify; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a * b</td>
+        </tr>
+        <tr>
+            <td style="text-align: justify; ">&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size:
+            12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-fareast-language:EN-IN">Division</span></td>
+            <td style="text-align: justify; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a / b</td>
+        </tr>
+        <tr>
+            <td style="text-align: justify; ">&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size:
+            12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-fareast-language:EN-IN">Modulus</span></td>
+            <td style="text-align: justify; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a % b</td>
+        </tr>
+    </tbody>
+</table>
+<br><br>
+<table width="336" cellspacing="1" cellpadding="1" border="1" align="center" style="">
+    <tbody>
+        <tr>
+            <td style="text-align: center; "><strong><span style="color: rgb(255, 0, 0);">Syntax</span></strong></td>
+        </tr>
+        <tr>
+            <td>
+            <p style="text-align: justify; "><!--[if gte mso 9]><xml>
+            <o:OfficeDocumentSettings>
+            <o:AllowPNG />
+            </o:OfficeDocumentSettings>
+            </xml><![endif]--><!--[if gte mso 9]><xml>
+            <w:WordDocument>
+            <w:View>Normal</w:View>
+            <w:Zoom>0</w:Zoom>
+            <w:TrackMoves />
+            <w:TrackFormatting />
+            <w:PunctuationKerning />
+            <w:ValidateAgainstSchemas />
+            <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+            <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+            <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+            <w:DoNotPromoteQF />
+            <w:LidThemeOther>EN-IN</w:LidThemeOther>
+            <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+            <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+            <w:Compatibility>
+            <w:BreakWrappedTables />
+            <w:SnapToGridInCell />
+            <w:WrapTextWithPunct />
+            <w:UseAsianBreakRules />
+            <w:DontGrowAutofit />
+            <w:SplitPgBreakAndParaMark />
+            <w:EnableOpenTypeKerning />
+            <w:DontFlipMirrorIndents />
+            <w:OverrideTableStyleHps />
+            </w:Compatibility>
+            <m:mathPr>
+            <m:mathFont m:val="Cambria Math" />
+            <m:brkBin m:val="before" />
+            <m:brkBinSub m:val="&#45;-" />
+            <m:smallFrac m:val="off" />
+            <m:dispDef />
+            <m:lMargin m:val="0" />
+            <m:rMargin m:val="0" />
+            <m:defJc m:val="centerGroup" />
+            <m:wrapIndent m:val="1440" />
+            <m:intLim m:val="subSup" />
+            <m:naryLim m:val="undOvr" />
+            </m:mathPr></w:WordDocument>
+            </xml><![endif]--><!--[if gte mso 9]><xml>
+            <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+            DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+            LatentStyleCount="267">
+            <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+            UnhideWhenUsed="false" QFormat="true" Name="Normal" />
+            <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+            UnhideWhenUsed="false" QFormat="true" Name="heading 1" />
+            <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2" />
+            <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3" />
+            <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4" />
+            <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5" />
+            <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6" />
+            <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7" />
+            <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8" />
+            <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9" />
+            <w:LsdException Locked="false" Priority="39" Name="toc 1" />
+            <w:LsdException Locked="false" Priority="39" Name="toc 2" />
+            <w:LsdException Locked="false" Priority="39" Name="toc 3" />
+            <w:LsdException Locked="false" Priority="39" Name="toc 4" />
+            <w:LsdException Locked="false" Priority="39" Name="toc 5" />
+            <w:LsdException Locked="false" Priority="39" Name="toc 6" />
+            <w:LsdException Locked="false" Priority="39" Name="toc 7" />
+            <w:LsdException Locked="false" Priority="39" Name="toc 8" />
+            <w:LsdException Locked="false" Priority="39" Name="toc 9" />
+            <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption" />
+            <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+            UnhideWhenUsed="false" QFormat="true" Name="Title" />
+            <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font" />
+            <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+            UnhideWhenUsed="false" QFormat="true" Name="Subtitle" />
+            <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+            UnhideWhenUsed="false" QFormat="true" Name="Strong" />
+            <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+            UnhideWhenUsed="false" QFormat="true" Name="Emphasis" />
+            <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Table Grid" />
+            <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text" />
+            <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+            UnhideWhenUsed="false" QFormat="true" Name="No Spacing" />
+            <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Light Shading" />
+            <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Light List" />
+            <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Light Grid" />
+            <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Shading 1" />
+            <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Shading 2" />
+            <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium List 1" />
+            <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium List 2" />
+            <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Grid 1" />
+            <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Grid 2" />
+            <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Grid 3" />
+            <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Dark List" />
+            <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Colorful Shading" />
+            <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Colorful List" />
+            <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Colorful Grid" />
+            <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Light Shading Accent 1" />
+            <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Light List Accent 1" />
+            <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Light Grid Accent 1" />
+            <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1" />
+            <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1" />
+            <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium List 1 Accent 1" />
+            <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision" />
+            <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+            UnhideWhenUsed="false" QFormat="true" Name="List Paragraph" />
+            <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+            UnhideWhenUsed="false" QFormat="true" Name="Quote" />
+            <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+            UnhideWhenUsed="false" QFormat="true" Name="Intense Quote" />
+            <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium List 2 Accent 1" />
+            <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1" />
+            <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1" />
+            <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1" />
+            <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Dark List Accent 1" />
+            <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Colorful Shading Accent 1" />
+            <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Colorful List Accent 1" />
+            <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Colorful Grid Accent 1" />
+            <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Light Shading Accent 2" />
+            <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Light List Accent 2" />
+            <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Light Grid Accent 2" />
+            <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2" />
+            <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2" />
+            <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium List 1 Accent 2" />
+            <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium List 2 Accent 2" />
+            <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2" />
+            <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2" />
+            <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2" />
+            <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Dark List Accent 2" />
+            <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Colorful Shading Accent 2" />
+            <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Colorful List Accent 2" />
+            <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Colorful Grid Accent 2" />
+            <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Light Shading Accent 3" />
+            <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Light List Accent 3" />
+            <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Light Grid Accent 3" />
+            <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3" />
+            <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3" />
+            <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium List 1 Accent 3" />
+            <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium List 2 Accent 3" />
+            <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3" />
+            <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3" />
+            <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3" />
+            <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Dark List Accent 3" />
+            <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Colorful Shading Accent 3" />
+            <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Colorful List Accent 3" />
+            <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Colorful Grid Accent 3" />
+            <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Light Shading Accent 4" />
+            <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Light List Accent 4" />
+            <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Light Grid Accent 4" />
+            <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4" />
+            <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4" />
+            <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium List 1 Accent 4" />
+            <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium List 2 Accent 4" />
+            <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4" />
+            <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4" />
+            <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4" />
+            <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Dark List Accent 4" />
+            <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Colorful Shading Accent 4" />
+            <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Colorful List Accent 4" />
+            <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Colorful Grid Accent 4" />
+            <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Light Shading Accent 5" />
+            <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Light List Accent 5" />
+            <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Light Grid Accent 5" />
+            <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5" />
+            <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5" />
+            <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium List 1 Accent 5" />
+            <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium List 2 Accent 5" />
+            <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5" />
+            <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5" />
+            <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5" />
+            <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Dark List Accent 5" />
+            <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Colorful Shading Accent 5" />
+            <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Colorful List Accent 5" />
+            <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Colorful Grid Accent 5" />
+            <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Light Shading Accent 6" />
+            <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Light List Accent 6" />
+            <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Light Grid Accent 6" />
+            <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6" />
+            <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6" />
+            <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium List 1 Accent 6" />
+            <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium List 2 Accent 6" />
+            <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6" />
+            <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6" />
+            <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6" />
+            <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Dark List Accent 6" />
+            <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Colorful Shading Accent 6" />
+            <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Colorful List Accent 6" />
+            <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+            UnhideWhenUsed="false" Name="Colorful Grid Accent 6" />
+            <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+            UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis" />
+            <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+            UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis" />
+            <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+            UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference" />
+            <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+            UnhideWhenUsed="false" QFormat="true" Name="Intense Reference" />
+            <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+            UnhideWhenUsed="false" QFormat="true" Name="Book Title" />
+            <w:LsdException Locked="false" Priority="37" Name="Bibliography" />
+            <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading" />
+            </w:LatentStyles>
+            </xml><![endif]--><!--[if gte mso 10]>
+            <style>
+            /* Style Definitions */
+            table.MsoNormalTable
+            {mso-style-name:"Table Normal";
+            mso-tstyle-rowband-size:0;
+            mso-tstyle-colband-size:0;
+            mso-style-noshow:yes;
+            mso-style-priority:99;
+            mso-style-parent:"";
+            mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+            mso-para-margin-top:0cm;
+            mso-para-margin-right:0cm;
+            mso-para-margin-bottom:10.0pt;
+            mso-para-margin-left:0cm;
+            line-height:115%;
+            mso-pagination:widow-orphan;
+            font-size:11.0pt;
+            font-family:"Calibri","sans-serif";
+            mso-ascii-font-family:Calibri;
+            mso-ascii-theme-font:minor-latin;
+            mso-hansi-font-family:Calibri;
+            mso-hansi-theme-font:minor-latin;
+            mso-bidi-font-family:"Times New Roman";
+            mso-bidi-theme-font:minor-bidi;
+            mso-fareast-language:EN-US;}
+            </style>
+            <![endif]--></p>
+            <p style="line-height: 80%; text-align: justify;" class="MsoNormalCxSpFirst"><code><span style="font-size:10.0pt;
+            line-height:80%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-fareast-language:EN-IN">module a(clk,a,b,c,d,e);</span></code></p>
+            <p style="line-height: 80%; text-align: justify; " class="MsoNormalCxSpFirst"><code><span style="font-size:10.0pt;
+            line-height:80%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-fareast-language:EN-IN">input clk;</span></code></p>
+            <p style="line-height: 80%; text-align: justify; " class="MsoNormalCxSpMiddle"><code><span style="font-size:10.0pt;
+            line-height:80%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-fareast-language:EN-IN">input [7:0] a,b;</span></code></p>
+            <p style="line-height: 80%; text-align: justify; " class="MsoNormalCxSpMiddle"><code><span style="font-size:10.0pt;
+            line-height:80%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-fareast-language:EN-IN">output reg[15:0] c,d,e,f,g;</span></code></p>
+            <p style="line-height: 80%; text-align: justify; " class="MsoNormalCxSpMiddle"><code><span style="font-size:10.0pt;
+            line-height:80%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-fareast-language:EN-IN">always @(posedge clk)</span></code></p>
+            <p style="line-height: 80%; text-align: justify; " class="MsoNormalCxSpMiddle"><code><span style="font-size:10.0pt;
+            line-height:80%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-fareast-language:EN-IN">begin</span></code></p>
+            <p style="line-height: 80%; text-align: justify; " class="MsoNormalCxSpMiddle"><code><span style="font-size:10.0pt;
+            line-height:80%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-fareast-language:EN-IN">c=a+b;</span></code></p>
+            <p style="line-height: 80%; text-align: justify; " class="MsoNormalCxSpMiddle"><code><span style="font-size:10.0pt;
+            line-height:80%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-fareast-language:EN-IN">d=a-b;</span></code></p>
+            <p style="line-height: 80%; text-align: justify; " class="MsoNormalCxSpMiddle"><code><span style="font-size:10.0pt;
+            line-height:80%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-fareast-language:EN-IN">e=a*b;</span></code></p>
+            <p style="line-height: 80%; text-align: justify; " class="MsoNormalCxSpMiddle"><code><span style="font-size:10.0pt;
+            line-height:80%;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+            mso-fareast-language:EN-IN">end</span></code></p>
+            <p style="text-align: justify; "><code><span style="font-size:10.0pt;line-height:115%;font-family:&quot;Courier New&quot;;
+            mso-fareast-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-IN;mso-fareast-language:
+            EN-IN;mso-bidi-language:AR-SA">endmodule</span></code></p>
+            </td>
+        </tr>
+    </tbody>
+</table><br><br>
+</p>
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'>
+  For more detail see the sample program number 1.   <br><br>
+  <strong> Comparison/Relational operators:</strong><br><br>
+The relational operators are used to compare expressions. The value returned by the relational operators is 0 if the expression evaluates to false and 1 if expression evaluates to true. Following table gives the list of relational operators.<br><br>
+<table cellspacing="1" cellpadding="1" border="1" align="center" style="width: 292px; height: 213px;">
+    <tbody>
+        <tr>
+            <td style="text-align: justify; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(255, 0, 0);"><b><span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Description <br>
+            </span></b></span></td>
+            <td style="text-align: justify; "><span style="color: rgb(255, 0, 0);"><b><span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Operator</span></b></span></td>
+        </tr>
+        <tr>
+            <td style="text-align: justify; ">&nbsp; Equal to(Logical equality)</td>
+            <td style="text-align: justify; ">&nbsp; a==b</td>
+        </tr>
+        <tr>
+            <td style="text-align: justify; ">&nbsp; Not equal to(Logical inequality)</td>
+            <td style="text-align: justify; ">&nbsp; &nbsp;a!=b</td>
+        </tr>
+        <tr>
+            <td style="text-align: justify; ">&nbsp; Equal to(Case equality)</td>
+            <td style="text-align: justify; ">&nbsp; a===b</td>
+        </tr>
+        <tr>
+            <td style="text-align: justify; ">&nbsp; Not equal to(Case inequality)</td>
+            <td style="text-align: justify; ">&nbsp; a!==b</td>
+        </tr>
+        <tr>
+            <td style="text-align: justify; ">&nbsp; Greater than</td>
+            <td style="text-align: justify; ">&nbsp; a&gt;b</td>
+        </tr>
+        <tr>
+            <td style="text-align: justify; ">&nbsp; Less than</td>
+            <td style="text-align: justify; ">&nbsp; a&lt;b</td>
+        </tr>
+        <tr>
+            <td style="text-align: justify; ">&nbsp; Greater than or equal to</td>
+            <td style="text-align: justify; ">&nbsp; a&gt;=b</td>
+        </tr>
+        <tr>
+            <td style="text-align: justify; ">&nbsp; Less than or equal to</td>
+            <td style="text-align: justify; ">&nbsp; a&lt;=b</td>
+        </tr>
+    </tbody>
+</table><br><br>
+
+<table width="386" cellspacing="1" cellpadding="1" border="1" align="center" style="">
+    <tbody>
+        <tr>
+            <td style="text-align: center;"><strong><span style="color: rgb(255, 0, 0); ">Syntax</span></strong></td>
+        </tr>
+        <tr>
+            <td><code>
+            <p style="text-align: left;"><big>module rela_op(clk,a,b);</big><strong><big> </big></strong>&nbsp;</p>
+            </code>                          <code>
+            <p style="text-align: left;"><big><small>input clk;</small> </big>&nbsp;</p>
+            </code>                          <code>
+            <p style="text-align: left;"><big><small>output reg a,b;</small> </big>&nbsp;</p>
+            </code>                          <code>
+            <p style="text-align: left;"><big><small>always @(posedge clk)</small> </big>&nbsp;</p>
+            </code>                          <code>
+            <p style="text-align: left;"><big><small>begin</small> </big>&nbsp;</p>
+            </code>                          <code>
+            <p style="text-align: left;"><big><small>a= 4'b1110;&nbsp;&nbsp;&nbsp; //14</small></big>&nbsp;</p>
+            </code>                          <code>
+            <p style="text-align: left;"><big> <small>b= 4'b0110;&nbsp;&nbsp;&nbsp; //5</small> </big>&nbsp;</p>
+            </code>                          <code>
+            <p style="text-align: left;"><big><small>$display( "%b", a &lt; b );//false - 0</small> </big>&nbsp;</p>
+            </code>                          <code>
+            <p style="text-align: left;"><big><small>$display( "%b", a &gt; b );//true - 1</small> </big>&nbsp;</p>
+            </code>                          <code>
+            <p style="text-align: left;"><big><small>$display( "%b", a &lt;= b );//false - 0</small> </big>&nbsp;</p>
+            </code>                          <code>
+            <p style="text-align: left;"><big><small>$display( "%b", a &gt;= 10 );//true - 1</small> </big>&nbsp;</p>
+            </code>                          <code>
+            <p style="text-align: left;"><big><small>$display( "%b", a == 4'b1100 );//true - 1</small></big>&nbsp;</p>
+            </code>                          <code>
+            <p style="text-align: justify;"><big> <small>$display( "%b", a != 4b1100 );//false-0</small> </big>&nbsp;</p>
+            </code>                          <code>
+            <p style="text-align: left;"><big><small>end</small> </big></p>
+            <p style="text-align: left;"><code><big><small>end</small></big></code><code><big>module</big></code></p>
+            </code></td>
+        </tr>
+    </tbody>
+</table><br><br></p>
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'>
+ For more detail see the sample program number 2 and 3.<br><br>
+ <strong>Logical operators:</strong><br><br>
+The logical operators are used to connect expressions.The result for these operators is 0 (when false), and 1 (when true). The negation operator (!) turns a nonzero or true value of the operand into 0, zero or false value into 1. Following table gives the list of Logical operators.<br><br>
+<table width="200" cellspacing="1" cellpadding="1" border="1" align="center">
+    <tbody>
+        <tr>
+            <td style="text-align: justify; "><span style="color: rgb(255, 0, 0);"><strong>Description</strong></span></td>
+            <td style="text-align: justify; "><span style="color: rgb(255, 0, 0);"><strong>Operator</strong></span></td>
+        </tr>
+        <tr>
+            <td style="text-align: justify; ">&nbsp; Logical negation</td>
+            <td style="text-align: justify; ">&nbsp; !a</td>
+        </tr>
+        <tr>
+            <td style="text-align: justify; ">&nbsp; Logical AND</td>
+            <td style="text-align: justify; ">&nbsp; a&amp;&amp;b</td>
+        </tr>
+        <tr>
+            <td style="text-align: justify; ">&nbsp; Logical OR</td>
+            <td style="text-align: justify; ">&nbsp; a||b</td>
+        </tr>
+    </tbody>
+</table><br><br>
+<table width="336" cellspacing="1" cellpadding="1" border="1" align="center">
+    <tbody>
+        <tr>
+            <td style="text-align: center; "><strong><span style="color: rgb(255, 0, 0); ">Syntax</span></strong></td>
+        </tr>
+        <tr>
+            <td>
+            <pre style="text-align: justify;">module logical_op(clk,a,b);
+input clk;
+output reg a, b;
+always @(posedge clk)
+begin
+a = 4'b1100;
+b = 4'b0000;
+$display( "%b", !a );// false - 0
+$display( "%b", a &amp;&amp; b );// false - 0
+$display( "%b", a || b );// true - 1
+end
+endmodule
+</pre>
+            </td>
+        </tr>
+    </tbody>
+</table><br><br></p>
+<p class="PreformattedText" style="margin-left: 0.5in; text-indent: -0.25in;"><span lang="EN-IN" style='font-size: 12pt; font-family: "Verdana","sans-serif";'>
+For more detail see the sample program number 3. <br><br>
+<strong> Bitwise operators:</strong><br><br>
+Bitwise operators operate on the bits of the operand or operands. Following table gives the list of Bitwise operators.<br><br>
+<table cellspacing="1" cellpadding="1" border="1" align="center" style="width: 250px; height: 149px;">
+    <tbody>
+        <tr>
+            <td><strong style="color: rgb(255, 0, 0); text-align: justify; ">&nbsp;&nbsp; Description</strong></td>
+            <td><strong style="color: rgb(255, 0, 0); text-align: justify; ">&nbsp; Operator</strong></td>
+        </tr>
+        <tr>
+            <td>&nbsp;Bitwise NOT</td>
+            <td>&nbsp;~a</td>
+        </tr>
+        <tr>
+            <td>&nbsp;Bitwise AND</td>
+            <td>&nbsp;a &amp; b</td>
+        </tr>
+        <tr>
+            <td>&nbsp;Bitwise OR</td>
+            <td>&nbsp;a | b</td>
+        </tr>
+        <tr>
+            <td>&nbsp;Bitwise XOR</td>
+            <td>
+            <p style="text-align: left; ">&nbsp;a^b</p>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;Bitwise left shift</td>
+            <td>&nbsp;a &lt;&lt; b</td>
+        </tr>
+        <tr>
+            <td>&nbsp;Bitwise right shift</td>
+            <td>&nbsp;a &gt;&gt; b</td>
+        </tr>
+    </tbody>
+</table><br><br>
+<table width="336" cellspacing="1" cellpadding="1" border="1" align="center">
+    <tbody>
+        <tr>
+            <td style="text-align: center; "><strong><span style="color: rgb(255, 0, 0); ">Syntax</span></strong></td>
+        </tr>
+        <tr>
+            <td>
+            <pre style="text-align: justify;">module bitwise_op(clk,a,b,c,d);
+input clk;
+output reg a,b,c,d;
+always @(posedge clk)
+begin
+a = 4'b1100;
+b = 4'b0000;
+c = 8'b1010xzxz;
+d = 8'b10101011;
+$display( "%b", c &amp; d );// =8'b100000xx
+$display( "%b", c | d );// =8'b1011xx11
+$display( "%b", c ^ d );// =8'b0011xxxx
+$display( "%b", c ~^ d );// =8'b1100xxxx
+$display( "%b", c ~ d );// =8'b0101xxxx
+$display( "%b", a &lt;&lt; 3 );// =4'b1000
+$display( "%b", a &gt;&gt; 3 );// =4'b0001
+end
+endmodule
+</pre>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+</span></p>
+<p class="MsoNormal" style="line-height: 150%;"> </p>
+<p class="MsoNormal" style="line-height: 150%;"> </p>
+<p class="MsoNormal" style="line-height: 150%;"> </p>
+<p class="MsoNormal" style="line-height: 150%;"> </p></div></div>
+</section>
+<section id="experiment-article-section-4">
+<div class="icon" id="experiment-article-section-4-icon">
+<!-- Enclose the icon image of your lab.-->
+<img src="../images/simulation.jpg"/>
+</div>
+<div class="heading" id="experiment-article-section-4-heading">
+          Simulator
+        </div>
+<div class="content" id="experiment-article-section-4-content"><div class="divContent"><p><a href="Experiment1.html" target="_blank">Click here for Simulator</a><br><br>
+
+
+ 
+</p></div></div>
+</section>
+<section id="experiment-article-section-5">
+<div class="icon" id="experiment-article-section-5-icon">
+<!-- Enclose the icon image of your lab.-->
+<img src="../images/manual.jpg"/>
+</div>
+<div class="heading" id="experiment-article-section-5-heading">
+          Procedure and Demo
+        </div>
+<div class="content" id="experiment-article-section-5-content"><div class="divContent">
+
+
+<p class="MsoNormal" style="line-height: 150%;"><b><span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'> </span></b><br><strong>Steps to perform experiment:</strong><br><br>
+    1. Start simulator by clicking on the <strong>Simulation</strong> tab.<br>
+    2. Click on the link to <strong>enter the simulator.</strong><br>
+    3. Login to your virtual Lab account.<br>
+    4. First of all select a <strong>device</strong> from Device tab.(e.g. Device->Spartan 3E)<br>
+    5. Then select an Experiment to perform from list.<br>
+    6. After filling the necessary fields click on <strong>Submit</strong> button.<br>
+    7. Here you will get answer to verify answer from simulator.<br>
+    8. Now click on <strong>Generate Verilog Code</strong> button to generate the code.<br>
+    9. Load the generated program by clicking on <strong>Load Program</strong> tab.<br>
+    10. Enter the file name without extension.<br>
+    11. Click on <strong>Save On Server</strong> button to save program on your workspace at server.<br>
+    12. Now click on <strong>Compile</strong> tab to compile your code on server.<br>
+    13. After successful compilation, click on ok to generate the test bench.<br>
+    14. Click on checkbox to select as output registers and select its type as output from list.<br>
+    15. Enter data width (MSB=7 and LSB=0 for 8-bit output register).<br>
+    16. Click on <strong>Submit</strong> button.<br>
+    17. Click on <strong>Submit Test Bench</strong> button to submit your test bench.<br>
+    18. Click on <strong>Close This Window</strong> button.<br>
+    19. Click on <strong>Execute</strong> tab which is under Compile tab.<br>
+    20. Click on <strong>Timing Analysis</strong> tab to view Timing Analysis of input program.<br>
+    21. For <strong>Resource Utilization Report</strong> click on Resource Utilization Report tab.<br>
+    22. Your programs are saved on your workspace at server, which you can find under <strong>Your Programs</strong> tab.<br>
+    23. If you want to write your own code Go to <strong>File-> New</strong> and repeat the procedure from step 10 to 21.<br><br>
+</p>
+<div id="player" class="full-frame" style="width: 100%; height: 100%; overflow: hidden;">
+<embed width="100%" height="100%" name="player_uid_849565620_1" id="player_uid_849565620_1" tabindex="0" type="application/x-shockwave-flash" src="https://s.ytimg.com/yts/swfbin/player-vflq_SRd4/watch_as3.swf" wmode="opaque" allowscriptaccess="always" allowfullscreen="true" bgcolor="#000000" flashvars="iurlsd=https%3A%2F%2Fi.ytimg.com%2Fvi%2FaN1EFapWoPI%2Fsddefault.jpg&amp;iurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FaN1EFapWoPI%2Fhqdefault.jpg&amp;view_count=75&amp;index=0&amp;iurlmq=https%3A%2F%2Fi.ytimg.com%2Fvi%2FaN1EFapWoPI%2Fmqdefault.jpg&amp;allow_ratings=1&amp;rel=1&amp;is_html5_mobile_device=false&amp;title=Basic%20Arithmetical%20and%20Logical%20Operations&amp;length_seconds=215&amp;ldpj=-12&amp;hl=en_US&amp;loaderUrl=http%3A%2F%2Fcoep.vlab.co.in%2F%3Fsub%3D29%26brch%3D88%26sim%3D229%26cnt%3D346&amp;cr=IN&amp;iurlmaxres=https%3A%2F%2Fi.ytimg.com%2Fvi%2FaN1EFapWoPI%2Fmaxresdefault.jpg&amp;enablejsapi=1&amp;fexp=900718%2C907263%2C912325%2C927622%2C938672%2C941004%2C943917%2C945053%2C947209%2C947225%2C948124%2C952302%2C952605%2C952901%2C955301%2C957103%2C957105%2C957201%2C958626%2C959701&amp;idpj=-7&amp;allow_embed=1&amp;ssl=1&amp;host_language=en&amp;iurlhq=https%3A%2F%2Fi.ytimg.com%2Fvi%2FaN1EFapWoPI%2Fhqdefault.jpg&amp;el=embedded&amp;video_id=aN1EFapWoPI&amp;eurl=http%3A%2F%2Fcoep.vlab.co.in%2F%3Fsub%3D29%26brch%3D88%26sim%3D229%26cnt%3D346&amp;avg_rating=0&amp;playerapiid=player_uid_849565620_1&amp;framer=http%3A%2F%2Fcoep.vlab.co.in%2F%3Fsub%3D29%26brch%3D88%26sim%3D229%26cnt%3D346">
+</div>
+
+<p class="MsoNormal" style="line-height: 150%;"><b><span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'></span></b><span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'></span></p>
+<p class="MsoNormal" style="line-height: 150%;"><span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'> </span></p>
+
+<p class="MsoNormal" style="line-height: 150%;"><span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'> </span></p></div></div>
+</section>
+<section id="experiment-article-section-6">
+<div class="icon" id="experiment-article-section-6-icon">
+<!-- Enclose the icon image of your lab.-->
+<img src="images/content_94.png"/>
+</div>
+<div class="heading" id="experiment-article-section-6-heading">
+          Post Test
+        </div>
+<div class="content" id="experiment-article-section-6-content"><div class="divQuiz"><div id="displayQuiz"><form id="form11" method="post" name="form11">
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">1)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">(4/5) +(11/6)=?</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6058" name="ans0" type="radio" value="6058"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6058">15/11</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6057" name="ans0" type="radio" value="6057"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6057">24/55</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6059" name="ans0" type="radio" value="6059"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6059">23/10</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6060" name="ans0" type="radio" value="6060"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6060">15/30</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint10" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">2)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">Evaluate 150 ÷ (6 + 3 x 8) - 5</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6061" name="ans1" type="radio" value="6061"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6061">-(105/36)</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6062" name="ans1" type="radio" value="6062"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6062">0</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6063" name="ans1" type="radio" value="6063"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6063">150/67</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6064" name="ans1" type="radio" value="6064"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6064">6</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint11" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">3)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">Which sign makes the sentences true? 20 - 2 ? (17 + 7) +8</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6065" name="ans2" type="radio" value="6065"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6065">></label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6066" name="ans2" type="radio" value="6066"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6066"><</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6067" name="ans2" type="radio" value="6067"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6067">=</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6068" name="ans2" type="radio" value="6068"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6068"><=</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint12" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">4)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">	(21*5)/((5+4)/3)=?</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6069" name="ans3" type="radio" value="6069"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6069">25</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6070" name="ans3" type="radio" value="6070"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6070">30</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6071" name="ans3" type="radio" value="6071"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6071">33</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6072" name="ans3" type="radio" value="6072"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6072">35</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint13" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<table border="0" style="width:100%"><tr><td valign="top" width="2%"></td><td style="width:1%;vertical-align:top;" width="5%"><b><span id="questionNum">5)</span></b></td><td colspan="2" style="vertical-align:top;" width="70%"><span id="question">0 1 0 1 0 1 1 0 && 0 0 1 1 0 0 1 0= ----------------- ?</span></td><td colspan="3" width="3%"> </td></tr><tr><td> </td><td> </td><td colspan="5" width="80%"><table align="left" border="0" width="100%"><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6073" name="ans3" type="radio" value="6073"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6073">0 1 1 1 0 1 1 0</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6074" name="ans3" type="radio" value="6074"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6074">1 0 0 0 1 0 0 0</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6075" name="ans3" type="radio" value="6075"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6075">0 1 1 0 0 1 1 0</label></td></tr><tr><td align="right" id="textAnsChoice" style="vertical-align:middle" width="32px"><input id="ans6076" name="ans3" type="radio" value="6076"/> </td><td id="textAnsChoice" style="padding-left:3px;"><label for="ans6076">0 0 0 1 0 0 1 0</label></td></tr></table></td></tr> </table><div id="hint"><div id="textHint13" style="padding-left:50px; color:#F00;"></div></div><hr id="horizontalLine"/>
+
+<input align="middle" id="loadTime" name="loadTime" type="hidden" value="1379688873/"/><br/><div style="padding-left:40px;"><input id="submit1" name="submit1" onclick="get_radio_value();" style="width:8%;" type="submit" value=" Submit "/>  <input id="cancel1" name="cancel1" style="width:8%;" type="reset" value=" Cancel "/></div></form><br/></div><br/></div></div>
+</section>
+
+<section id="experiment-article-section-8">
+<div class="icon" id="experiment-article-section-8-icon">
+<!-- Enclose the icon image of your lab.-->
+<img src="images/assign.png"/>
+</div>
+<div class="heading" id="experiment-article-section-8-heading">
+          Assignment
+        </div>
+<div class="content" id="experiment-article-section-8-content"><div class="divContent"><p>1.    For a=4'b0111, b=4'b10011, c=7, d=2, e=3 find;<br>
+    &#x25cf; a+b<br>
+    &#x25cf; b-a<br>
+    &#x25cf; a*b<br>
+    &#x25cf; d/e<br>
+    &#x25cf; e%f<br><br>
+
+in Verilog and observe the clock cycles using "Timing Analysis" feature of Simulator.<br><br>
+
+ 
+
+2.    Design and Implement a classical D flip-flop using <= and ~ operators in Verilog and observe the clock cycles using "Timing Analysis" feature of Simulator.<br>
+
+3.    Design and Implement a JK flip-flop using <=, == and ~ operators in Verilog and observe the clock cycles using "Timing Analysis" feature of Simulator.<br>
+
+4.    Implement a logic function f=a.b+c using bitwise operatiors in Verilog and observe the clock cycles using "Timing Analysis" feature of Simulator.<br>
+
+5.    Design and Implement 1-bit ful adder circuit using bitwise operators in Verilog and observe the clock cycles using "Timing Analysis" feature of Simulator.<br>
+<br><br>
+
+<h2><span style="color: rgb(51, 102, 255);">  </span>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="Word.Document" name="ProgId"/>
+<meta content="Microsoft Word 12" name="Generator"/>
+<meta content="Microsoft Word 12" name="Originator"/>
+<link href="file:///C:%5CUsers%5Cinstru%5CAppData%5CLocal%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_filelist.xml" rel="File-List"/>
+<link href="file:///C:%5CUsers%5Cinstru%5CAppData%5CLocal%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_themedata.thmx" rel="themeData"/>
+<link href="file:///C:%5CUsers%5Cinstru%5CAppData%5CLocal%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_colorschememapping.xml" rel="colorSchemeMapping"/>
+</h2>
+ 
+</p></div></div>
+</section>
+
+
+
+</div>
+</article>
+</div>
+</body></html>

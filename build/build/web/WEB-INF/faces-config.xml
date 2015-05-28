@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE faces-config PUBLIC "-//Sun Microsystems, Inc.//DTD JavaServer Faces
+Config 1.1//EN"
+"http://java.sun.com/dtd/web-facesconfig_1_1.dtd">
+<faces-config>
+
+	<application>
+		<locale-config>
+			<default-locale>en</default-locale>
+		</locale-config>
+	</application>
+
+	<managed-bean>
+		<managed-bean-name>LoginForm</managed-bean-name>
+		<managed-bean-class>LoginForm</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+
+	 <managed-bean>
+        <managed-bean-name>RetrievePassword</managed-bean-name>
+        <managed-bean-class>RetrievePassword</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>		
+    </managed-bean>
+
+	<managed-bean>
+        <managed-bean-name>userForm</managed-bean-name>
+        <managed-bean-class>UserForm</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+
+	<navigation-rule>
+		<from-view-id>/user/login.jsp</from-view-id>
+		<navigation-case>
+			<from-action>#{LoginForm.validUser}</from-action>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/user/success.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{LoginPage.validUser}</from-action>
+			<from-outcome>failure</from-outcome>
+			<to-view-id>/user/login.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>forgotpassword</from-outcome>
+			<to-view-id>/user/forgotpassword.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>useraccount</from-outcome>
+			<to-view-id>/user/useraccount.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/user/forgotpassword.jsp</from-view-id>
+		<navigation-case>
+			<from-action>#{RetrievePassword.check}</from-action>
+			<from-outcome>passwordsendingsuccess</from-outcome>
+			<to-view-id>/user/successpwdsend.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{RetrievePassword.check}</from-action>
+			<from-outcome>passwordsendingfail</from-outcome>
+			<to-view-id>/user/forgotpassword.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/user/success.jsp</from-view-id>
+		
+		<navigation-case>
+			<from-action>#{LoginForm.logout}</from-action>
+			<from-outcome>logoutsuccess</from-outcome>
+			<to-view-id>/user/logout.jsp</to-view-id>
+		</navigation-case>	
+		<navigation-case>
+			<from-action>#{userForm.editProfile}</from-action>
+			<from-outcome>editSuccess</from-outcome>
+			<to-view-id>/user/useraccount.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>changePassword</from-outcome>
+			<to-view-id>/user/changepassword.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/user/changepassword.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/user/changepasswordsuccess.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>failure</from-outcome>
+			<to-view-id>/user/changepassword.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>gotomain</from-outcome>
+			<to-view-id>/user/success.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
+	<navigation-rule>
+		<from-view-id>/user/useraccount.jsp</from-view-id>
+		<navigation-case>
+			<from-action>#{userForm.saveUser}</from-action>
+			<from-outcome>successUserRegistration</from-outcome>
+			<to-view-id>/user/newaccountsuccess.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{userForm.saveUser}</from-action>
+			<from-outcome>successUserUpdate</from-outcome>
+			<to-view-id>/user/userUpdateSuccess.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{userForm.saveUser}</from-action>
+			<from-outcome>error</from-outcome>
+			<to-view-id>/user/useraccount.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+</faces-config>

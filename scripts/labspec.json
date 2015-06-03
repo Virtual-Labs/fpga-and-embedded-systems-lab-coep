@@ -12,7 +12,7 @@
                 }, 
                 "installer": [], 
                 "os": "ubuntu", 
-                "osVersion": "12", 
+                "osVersion": "14.04", 
                 "service_pack": ""
             }
         }, 
@@ -20,41 +20,43 @@
             "developer": [
                 {
                     "contact": {
-                        "alternate_email": "", 
-                        "email": "sushil.medhe@gmail.com", 
-                        "mobile_number": "", 
+                        "alternate_email": "pl.vlab@coep.ac.in", 
+                        "email": "pl.vlab@coep.ac.in", 
+                        "mobile_number": "9960291339", 
                         "office_number": ""
                     }, 
                     "department": "", 
-                    "institute": "COE Pune", 
-                    "name": "Sushil Medhe", 
+                    "institute": "College Of Engineering Pune"
+                    "name": " Prashant Lokhande", 
                     "organization": "", 
-                    "role": "Lab Developer", 
-                    "title": "", 
+                    "role": "Software Developer", 
+                    "title": "Er", 
                     "web": ""
                 }, 
-                {
+				{
                     "contact": {
-                        "alternate_email": "", 
-                        "email": "gkothawade4@gmail.com", 
-                        "mobile_number": "", 
+                        "alternate_email": "lpk.vlabs@coep.ac.in", 
+                        "email": "lpk.vlabs@coep.ac.in", 
+                        "mobile_number": "8237001318", 
                         "office_number": ""
                     }, 
                     "department": "", 
-                    "institute": "COE Pune", 
-                    "name": "Gaurav Kothawade", 
+                    "institute": "College Of Engineering Pune"
+                    "name": " Laxmikant Kumbhare", 
                     "organization": "", 
-                    "role": "Lab Developer", 
-                    "title": "", 
+                    "role": "Project Engineer", 
+                    "title": "Er", 
                     "web": ""
-                }
+                }, 
+           
+           
             ], 
             "discipline": [
-                "Electrical Engineering"
+                ""
             ], 
-            "id": "sensor01", 
+            "id": "", 
             "integration_level": 5, 
-            "name": "PLC", 
+            "name": "FPGA Lab", 
             "server-side": true, 
             "status": "Released", 
             "type": ""
@@ -64,31 +66,35 @@
                 "arch": "i386", 
                 "hosting": "dedicated", 
                 "installer": ["sudo apt-get update",
-                "sudo apt-get install -y apache2"], 
+				"sudo apt-get install -y openjdk-7-jdk",
+                "sudo apt-get install -y tomcat7",
+				"sudo apt-get install -y mysql-server",
+				"sudo apt-get install -y iverilog",
+				
+		], 
                 "lab_actions": {
                     "backup": [], 
                     "clean": [], 
-                    "init": ["mv /var/www/index.html index.html.default",
-                        "cp -r ../build/* /var/www/"
+                    "init": [
                         ], 
                     "pause": [], 
                     "publish": [], 
                     "restore": [], 
                     "resume": [], 
-                    "shutdown": ["service apache2 stop"], 
-                    "start": ["service apache2 start"],  
+                    "shutdown": ["service apache2 stop","service mysql stop"], 
+                    "start": ["service apache2 start","service mysql start"],  
                     "stats": [], 
                     "stop": []
                 }, 
                 "memory": {
                     "max_required": "2gb", 
-                    "min_required": "256mb"
+                    "min_required": "512mb"
                 }, 
                 "os": "ubuntu", 
-                "osVersion": "12", 
+                "osVersion": "14.04", 
                 "servicepack": "", 
                 "storage": {
-                    "min_required": "10gb"
+                    "min_required": "20gb"
                 }
             }
         }

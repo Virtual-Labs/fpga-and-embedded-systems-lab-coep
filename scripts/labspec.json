@@ -75,7 +75,7 @@
                 "lab_actions": {
                     "backup": [], 
                     "clean": [], 
-                    "init": [
+                    "init": ["bash ../src/database/db_config.sh"
                         ], 
                     "pause": [], 
                     "publish": [], 

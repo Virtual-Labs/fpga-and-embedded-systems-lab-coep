@@ -1,13 +1,15 @@
-apt-get -q -y install mysql-server
+#!/bin/bash
 
-mysqladmin -u root password klaxmikantp
+#apt-get -q -y install mysql-server
+
+mysqladmin -u root -pklaxmikantp
 
 DATABASE_NAME="VirtualLab"
 
-mysql -u root -Bse "create database $DATABASE_NAME;"
-mysql -u root -Bse "GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY 'klaxmikantp' WITH GRANT OPTION;"
+mysql -u root -pklaxmikantp -Bse "create database $DATABASE_NAME;"
+mysql -u root -pklaxmikantp -Bse "GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY 'klaxmikantp' WITH GRANT OPTION;"
 
-mkdir /usr/local/Temp
-chmod -R 777 /usr/local/Temp
-chown /usr/local/Temp tomcat7
-cp fpgadb.sql /usr/local/Temp
+mkdir -p /usr/local/Temp
+chmod 777 -R /usr/local/Temp
+chown -R tomcat7:tomcat7 /usr/local/Temp
+cp ./fpgadb.sql /usr/local/Temp

@@ -2,7 +2,7 @@
 
 #apt-get -q -y install mysql-server
 
-mysqladmin -u root -pklaxmikantp
+mysqladmin -u root password klaxmikantp
 
 DATABASE_NAME="VirtualLab"
 

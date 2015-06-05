@@ -88,7 +88,7 @@
                     "min_required": "512mb"
                 }, 
                 "os": "ubuntu", 
-                "osVersion": "14.04", 
+                "osVersion": "12", 
                 "servicepack": "", 
                 "storage": {
                     "min_required": "20gb"

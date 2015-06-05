@@ -72,7 +72,8 @@
                 "lab_actions": {
                     "backup": [], 
                     "clean": [], 
-                    "init": ["bash ../src/database/db_config.sh"
+                    "init": ["bash ../src/database/db_config.sh",
+                             "cp ../src/database/fpgadb.sql /usr/local/Temp"
                         ], 
                     "pause": [], 
                     "publish": [], 

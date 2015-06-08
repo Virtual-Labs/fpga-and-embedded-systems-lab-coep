@@ -73,7 +73,9 @@
                     "backup": [], 
                     "clean": [], 
                     "init": ["bash ../src/database/db_config.sh",
-                             "cp ../src/database/fpgadb.sql /usr/local/Temp"
+                             "cp ../src/database/fpgadb.sql /usr/local/Temp",
+                             "mv /var/www/index.html index.html.default",
+                        "cp -r ../src/lab/* /var/www/"
                         ], 
                     "pause": [], 
                     "publish": [], 

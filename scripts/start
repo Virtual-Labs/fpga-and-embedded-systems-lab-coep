@@ -9,13 +9,13 @@
 
 # starts the Apache service
 #!/bin/bash
-apache2_status=$(service apache2 status)
-echo $apache2_status
-if [[ "$apache2_status" == *"running"* ]];  then
-    echo "apache is running"
-elif [[ "$apache2_status" == *"stop"* ]];  then
-    echo "apache2 is not running"
-    service apache2 start
+tomcat7_status=$(service tomcat7 status)
+echo $tomcat7_status
+if [[ "$tomcat7_status" == *"running"* ]];  then
+    echo "tomcat7 is running"
+elif [[ "$tomcat7_status" == *"stop"* ]];  then
+    echo "tomcat7 is not running"
+    service tomcat7 start
 fi
 
 mysql_status=$(service mysql status)

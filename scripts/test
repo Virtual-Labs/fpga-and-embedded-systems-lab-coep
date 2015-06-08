@@ -19,3 +19,14 @@ then
 else
 	echo "Test Failed!"
 fi
+
+# checks for the status of mysql service
+status=$(service mysql status)
+
+#echo the test result
+if [ $? -eq 0 ]
+then 
+	echo "Test Passed!"
+else
+	echo "Test Failed!"
+fi

@@ -6,6 +6,6 @@
 # ./scripts/stop.sh
 
 # stops the Apache service
-service apache2 stop,
+service tomcat7 stop,
 service mysql stop
 

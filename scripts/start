@@ -8,5 +8,25 @@
 # ./scripts/startup.sh
 
 # starts the Apache service
-service apache2 start
+#!/bin/bash
+apache2_status=$(service apache2 status)
+echo $apache2_status
+if [[ "$apache2_status" == *"running"* ]];  then
+    echo "apache is running"
+elif [[ "$apache2_status" == *"stop"* ]];  then
+    echo "apache2 is not running"
+    service apache2 start
+fi
+
+mysql_status=$(service mysql status)
+echo $mysql_status
+if [[ "$mysql_status" == *"running"* ]];  then
+    echo "Mysql is running"
+elif [[ "$mysql_status" == *"stop"* ]];  then
+    echo "mysql is not running"
+    service mysql start
+fi
+
+exit 0;
+
 

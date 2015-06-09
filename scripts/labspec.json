@@ -75,8 +75,7 @@
                     "init": ["bash ../src/database/db_config.sh",
                              "cp ../src/database/fpgadb.sql /usr/local/Temp",
                              "mv /var/www/index.html index.html.default",
-                             "cp -r ../src/lab/* /var/www/",
-                             "cp -r ../src/lab/* /var/lib/tomcat7/webapps/ROOT/"
+                             "cp -r ../src/lab/* /var/www/"
                         ], 
                     "pause": [], 
                     "publish": [], 

@@ -65,7 +65,7 @@
                 "hosting": "dedicated", 
                 "installer": ["sudo apt-get update",
 				"sudo apt-get install -y openjdk-7-jdk",
-                "sudo apt-get install -y tomcat7",
+                            	"sudo apt-get install -y tomcat7",
 				"sudo apt-get install -y mysql-server",
 				"sudo apt-get install -y iverilog"
 		], 
@@ -75,7 +75,8 @@
                     "init": ["bash ../src/database/db_config.sh",
                              "cp ../src/database/fpgadb.sql /usr/local/Temp",
                              "mv /var/www/index.html index.html.default",
-                        "cp -r ../src/lab/* /var/www/"
+                             "cp -r ../src/lab/* /var/www/",
+                             "cp -r ../src/lab/* /var/lib/tomcat7/webapps/ROOT/"
                         ], 
                     "pause": [], 
                     "publish": [], 

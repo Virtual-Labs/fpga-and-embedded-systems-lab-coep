@@ -12,4 +12,4 @@ mysql -u root -pklaxmikantp -Bse "GRANT ALL PRIVILEGES ON *.* TO 'root'@'localho
 mkdir -p /usr/local/Temp
 chmod 777 -R /usr/local/Temp
 chown -R tomcat7:tomcat7 /usr/local/Temp
-#cp ./fpgadb.sql /usr/local/Temp
+mysql -u root -pklaxmikantp $DATABASE_NAME < fpgadb.sql

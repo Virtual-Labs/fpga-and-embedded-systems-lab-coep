@@ -78,7 +78,7 @@
                              "mv /var/www/index.html index.html.default",
                              "cp -r ../build/* /var/www/",
                              "jar -cvf FPGAExp1.war ../src/lab/web/*",
-                             "cp -r ../script/FPGAExp1.war /var/lib/tomcat7/webapps/",
+                             "cp -r FPGAExp1.war /var/lib/tomcat7/webapps/",
 			     "bash ../src/database/apache_config.sh",
                              "service apache2 restart"
                         ], 

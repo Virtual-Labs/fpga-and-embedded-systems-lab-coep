@@ -9,3 +9,4 @@ sed -i '/<\/VirtualHost>/i \
 ProxyPassMatch    ^/web(.*) http://localhost:8080/FPGAExp1/$1\
 ProxyPassReverse  ^/web(.*) http://localhost:8080/FPGAExp1/$1
 ' $apache_vhost_file
+a2enmod proxy_http

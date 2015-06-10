@@ -77,7 +77,7 @@
                              "cp ../src/database/fpgadb.sql /usr/local/Temp",
                              "mv /var/www/index.html index.html.default",
                              "cp -r ../build/* /var/www/",
-                             "jar -cvf FPGAExp1.war ../src/lab/web/*",
+                             "cd ../src/lab/web && jar -cvf FPGAExp1.war *",
                              "cp -r FPGAExp1.war /var/lib/tomcat7/webapps/",
 			     "bash ../src/database/apache_config.sh",
                              "service apache2 restart"

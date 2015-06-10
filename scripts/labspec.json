@@ -4,7 +4,9 @@
             "platform": {
                 "arch": "i386", 
                 "build_steps": {
-                    "build": ["make -C ../src"], 
+                    "build": ["make -C ../src",
+                    	      "jar -cvf FPGAExp1.war ../src/lab/web/*"
+                    ], 
                     "configure": [], 
                     "post_build": [], 
                     "pre_build": [], 
@@ -77,7 +79,7 @@
                              "cp ../src/database/fpgadb.sql /usr/local/Temp",
                              "mv /var/www/index.html index.html.default",
                              "cp -r ../build/* /var/www/",
-                             "cp -r ../src/war/FPGAExp1.war /var/lib/tomcat7/webapps/",
+                             "cp -r ../script/FPGAExp1.war /var/lib/tomcat7/webapps/",
 			     "bash ../src/database/apache_config.sh",
                              "service apache2 restart"
                         ], 

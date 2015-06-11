@@ -27,6 +27,13 @@ elif [[ "$mysql_status" == *"stop"* ]];  then
     service mysql start
 fi
 
+apache2_status=$(service apache2 status)
+echo $apache2_status
+if [[ "$apache2_status" == *"running"* ]];  then
+    echo "apache2 is running"
+elif [[ "$apache2_status" == *"stop"* ]];  then
+    echo "apache2 is not running"
+    service apache2 start
+fi
+
 exit 0;
-
-

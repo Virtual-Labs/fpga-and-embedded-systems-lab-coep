@@ -79,7 +79,7 @@
                                     }
 
                                     if (compile[0].equals("./a.out")) {
-                                        compile[0] = "/root/Temp/" + ws + "/./a.out";
+                                        compile[0] = constants.Constants.PATH + ws + "/./a.out";
                                     }
 
                                     String tardone = (String) session.getAttribute("tardone");
@@ -95,7 +95,7 @@
                                     }
 
                                     if (compile[0].equals("./a.out")) {
-                                        compile[0] = "/root/Temp/" + ws + "/./a.out";
+                                        compile[0] = constants.Constants.PATH + ws + "/./a.out";
                                     }
 
                                     //if(compile[1]!=null)

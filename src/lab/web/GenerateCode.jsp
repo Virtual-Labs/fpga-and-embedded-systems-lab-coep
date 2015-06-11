@@ -81,7 +81,7 @@
         <%
             String ws = (String) session.getAttribute("workspace");
             String device = (String) session.getAttribute("device");
-            File fp = new File("/root/Temp/" + ws + "/" + "demo1.vl");
+            File fp = new File(constants.Constants.PATH + ws + "/" + "demo1.vl");
             FileOutputStream fos = null;
             PrintStream p = null;
             operType = request.getParameter("opera");

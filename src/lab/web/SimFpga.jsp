@@ -78,7 +78,7 @@
                 response.addCookie(cookie);
                 session.setAttribute("workspace", Integer.toString(ucount));
                 ws = Integer.toString(ucount);
-                boolean s = c.createdir("/root/Temp/" + ws);
+                boolean s = c.createdir(constants.Constants.PATH + ws);
                 if (s == false) {
                     ws = "default";
                     session.setAttribute("workspace", ws);

@@ -14,7 +14,7 @@
     // System.out.println(fpath);
     String filecontent = new String();
     String ws = (String) session.getAttribute("workspace");
-    File fp = new File("/root/Temp/" + ws + "/" + "demo1.vl");
+    File fp = new File(constants.Constants.PATH + ws + "/" + "demo1.vl");
     FileInputStream fis = new FileInputStream(fp);
     DataInputStream dis = new DataInputStream(fis);
     while (dis.available() != 0) {

@@ -46,7 +46,7 @@ out.print("Test Bench for \""+filename+".vl :\" ");%>
             <textarea rows="20" cols="40" name="tb" id="prog">
 <% 
 String ws=(String)session.getAttribute("workspace");
-File file = new File("/root/Temp/"+ws+"/testbench.vl");
+File file = new File(constants.Constants.PATH+ws+"/testbench.vl");
 try{
 FileInputStream fin = new FileInputStream(file);
 byte fileContent[] = new byte[(int)file.length()];

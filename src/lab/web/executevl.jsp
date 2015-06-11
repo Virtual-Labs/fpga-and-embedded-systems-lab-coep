@@ -31,8 +31,8 @@ if (fname!=null && ws!=null){
     String[] compile=new String[2];
     System.out.println("fname : /************* "+fname);
     compile[0]="vvp";
-    compile[1]="/root/Temp/"+ws+"/"+fname;
-p = Runtime.getRuntime().exec(compile,null,new File("/root/Temp/"+ws));
+    compile[1]=constants.Constants.PATH+ws+"/"+fname;
+p = Runtime.getRuntime().exec(compile,null,new File(constants.Constants.PATH+ws));
 
 
 			BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));

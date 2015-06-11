@@ -24,11 +24,14 @@
         String[] compile = new String[4];
         compile[0] = "iverilog";
         compile[1] = "-o";
-        compile[2] = "/root/Temp/" + ws + "/" + fname;
-        compile[3] = "/root/Temp/" + ws + "/" + fname + ".vl";
-
+        compile[2] = constants.Constants.PATH + ws + "/" + fname;
+        compile[3] = constants.Constants.PATH + ws + "/" + fname + ".vl";
+       
+        // compile[3] = "/root/Temp/" + ws + "/" + fname + ".vl";
         //System.out.println(command);*/
+        System.out.println("alo");
         p = Runtime.getRuntime().exec(compile);
+         
         BufferedReader br = new BufferedReader(new InputStreamReader(p.getErrorStream()));
         String line = "";
         //OutputStream os=new FileOutputStream("/home/pranav/Desktop/om/Report.txt");
@@ -50,9 +53,9 @@
             String[] compile = new String[5];
             compile[0] = "iverilog";
             compile[1] = "-o";
-            compile[2] = "/root/Temp/" + ws + "/" + fname;
-            compile[3] = "/root/Temp/" + ws + "/" + fname + ".vl";
-            compile[4] = "/root/Temp/" + ws + "/testbench.vl";
+            compile[2] = constants.Constants.PATH + ws + "/" + fname;
+            compile[3] = constants.Constants.PATH + ws + "/" + fname + ".vl";
+            compile[4] = constants.Constants.PATH + ws + "/testbench.vl";
             //System.out.println(command);*/
             p = Runtime.getRuntime().exec(compile);
             BufferedReader br = new BufferedReader(new InputStreamReader(p.getErrorStream()));

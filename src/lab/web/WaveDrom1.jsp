@@ -27,7 +27,7 @@
         <script type="text/javascript" src="WaveDromEditor.js"></script>
     </head>
    <% 
-   String ws=(String)session.getAttribute("workspace");File dir = new File("/root/Temp/"+ws+"");
+   String ws=(String)session.getAttribute("workspace");File dir = new File(constants.Constants.PATH+ws+"");
 String[] children = dir.list();int f=0;
 if(children!=null)for(int i=0;i<children.length;i++)
 if(children[i].contains("vcd")){f=1;}

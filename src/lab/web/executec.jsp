@@ -31,7 +31,7 @@ if (fname!=null && ws!=null){
     String[] compile=new String[1];
     compile[0]="./a.out";
 
-p = Runtime.getRuntime().exec(compile,null,new File("/root/Temp/"+ws));
+p = Runtime.getRuntime().exec(compile,null,new File(constants.Constants.PATH+ws));
 
 
 			BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));

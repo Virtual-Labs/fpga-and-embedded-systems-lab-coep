@@ -5,7 +5,7 @@
 <%
 String fname=(String)request.getParameter("mypro");
 String ws=(String)session.getAttribute("workspace");
-File file = new File("/root/Temp/"+ws+"/"+fname);
+File file = new File(constants.Constants.PATH+ws+"/"+fname);
 try{
 FileInputStream fin = new FileInputStream(file);
 byte fileContent[] = new byte[(int)file.length()];

@@ -19,13 +19,13 @@
     <body>
         <%
         String ws=(String)session.getAttribute("workspace");
-        File outFolder=new File("/root/Temp/zip/workspace"+ws+".zip");
+        File outFolder=new File(constants.Constants.PATH+"zip/workspace"+ws+".zip");
  ZipOutputStream out1 = new ZipOutputStream(new
 BufferedOutputStream(new FileOutputStream(outFolder)));
         if(ws!=null){
         
             try{
- File inFolder=new File("/root/Temp/"+ws);
+ File inFolder=new File(constants.Constants.PATH+ws);
    
  BufferedInputStream in = null;
  byte[] data  = new byte[1000];
@@ -52,7 +52,7 @@ out1.putNextEntry(new ZipEntry(files[i]));
 
 
 <% try {
-   String filename = "/root/Temp/zip/workspace"+ws+".zip";
+   String filename = constants.Constants.PATH+"zip/workspace"+ws+".zip";
 
    // set the http content type to "APPLICATION/OCTET-STREAM
          response.setContentType("application/zip");

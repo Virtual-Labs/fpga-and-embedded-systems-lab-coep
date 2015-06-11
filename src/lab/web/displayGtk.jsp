@@ -45,7 +45,7 @@ BufferedImage screenImage=null;
     String[] compile=new String[2];
     compile[0]="gtkwave";
 
-    compile[1]="/root/Temp/"+ws+"/"+vcdfile;
+    compile[1]=constants.Constants.PATH+ws+"/"+vcdfile;
 
 Robot myRobot=new Robot();
 if(System.getProperty("Lock")==null)System.setProperty("Lock","false");
@@ -196,7 +196,7 @@ for (int x=1781; x < 1822; ++x)
   
  
 
- File outputfile = new File("/root/Temp/"+ws+"/saved.jpeg");
+ File outputfile = new File(constants.Constants.PATH+ws+"/saved.jpeg");
 ImageIO.write(enlargedImage,"jpeg", outputfile);
 
 

@@ -22,7 +22,7 @@ if (fname!=null ){
     compile[0]="/opt/cross-compiler/usr/local/arm/4.3.2/bin/arm-none-linux-gnueabi-gcc";
     compile[1]="-o";
     compile[2]="/var/www/ARM_BOARD/"+fname+"arm";
-    compile[3]="/root/Temp/"+ws+"/"+fname+".c";
+    compile[3]=constants.Constants.PATH+ws+"/"+fname+".c";
       //System.out.println(command);null,new File("/root/Temp/"+ws)*/
 p = Runtime.getRuntime().exec(compile);
 			BufferedReader br = new BufferedReader(new InputStreamReader(p.getErrorStream()));

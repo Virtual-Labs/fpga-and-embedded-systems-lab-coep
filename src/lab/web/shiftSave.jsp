@@ -19,7 +19,7 @@
     int len=Integer.parseInt(request.getParameter("length"));
     String dataType=request.getParameter("datatype");
     String shiftType=request.getParameter("shiftType");
-    File fp = new File("/root/Temp/" + ws + "/" + "demo1.vl");
+    File fp = new File(constants.Constants.PATH + ws + "/" + "demo1.vl");
         FileOutputStream fos = null;
             PrintStream p = null;
             fos = new FileOutputStream(fp);

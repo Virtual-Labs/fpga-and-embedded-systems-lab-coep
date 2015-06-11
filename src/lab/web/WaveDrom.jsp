@@ -20,7 +20,7 @@
         <script type="text/javascript" src="WaveDromEditor.js"></script>
     </head>
    <% 
-   String ws=(String)session.getAttribute("workspace");File dir = new File("/root/Temp/"+ws+"");
+   String ws=(String)session.getAttribute("workspace");File dir = new File(constants.Constants.PATH+ws+"");
 String[] children = dir.list();int f=0;
 if(children!=null)for(int i=0;i<children.length;i++)
 if(children[i].contains("vcd")){f=1;}
@@ -40,7 +40,7 @@ tbcontent=tbcontent.replaceAll("initial(\\s+)begin(\\s+)#(\\s?)(\\d+)","initial 
 out.print(tbcontent);
 String tbstring=tbcontent;
 try{
-OutputStream os=new FileOutputStream("/root/Temp/"+ws+"/testbench.vl");
+OutputStream os=new FileOutputStream(constants.Constants.PATH+ws+"/testbench.vl");
 int i=0;
 while(i<tbstring.length()){
 os.write(tbstring.charAt(i));i++;}
@@ -53,15 +53,15 @@ if(fname!=null && ws!=null){ ///
     String[] compile=new String[5];
     compile[0]="iverilog";
     compile[1]="-o";
-    compile[2]="/root/Temp/"+ws+"/"+fname;
-    compile[3]="/root/Temp/"+ws+"/"+fname+".vl";
-    compile[4]="/root/Temp/"+ws+"/testbench.vl";
+    compile[2]=constants.Constants.PATH+ws+"/"+fname;
+    compile[3]=constants.Constants.PATH+ws+"/"+fname+".vl";
+    compile[4]=constants.Constants.PATH+ws+"/testbench.vl";
 Process p=Runtime.getRuntime().exec(compile);
    
 compile=new String[2];
     compile[0]="vvp";
-    compile[1]="/root/Temp/"+ws+"/"+fname;
-p = Runtime.getRuntime().exec(compile,null,new File("/root/Temp/"+ws));
+    compile[1]=constants.Constants.PATH+ws+"/"+fname;
+p = Runtime.getRuntime().exec(compile,null,new File(constants.Constants.PATH+ws));
 BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
 			String line = "";
 			//OutputStream os=new FileOutputStream("/home/pranav/Desktop/om/Report.txt");

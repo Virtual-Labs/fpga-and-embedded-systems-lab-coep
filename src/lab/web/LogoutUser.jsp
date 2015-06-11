@@ -15,8 +15,9 @@
         <%
             String ref = request.getParameter("ref");
             System.out.println("ref: "+ref);
-            
+            //if(session!=null){    
             session.invalidate();
+           // }
             response.sendRedirect(ref);
         %>
     </body>

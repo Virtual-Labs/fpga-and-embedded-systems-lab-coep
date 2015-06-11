@@ -30,7 +30,7 @@
                             FileInputStream fis = null;
                             BufferedInputStream bis = null;
                             DataInputStream dis = null;
-                            fis = new FileInputStream("/root/Temp/" + fname + ".vl");
+                            fis = new FileInputStream(constants.Constants.PATH + fname + ".vl");
 
                             // Here BufferedInputStream is added for fast reading.
                             bis = new BufferedInputStream(fis);

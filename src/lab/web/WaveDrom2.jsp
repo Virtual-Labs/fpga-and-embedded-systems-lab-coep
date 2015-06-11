@@ -27,7 +27,7 @@
         System.out.println("cycle : " + cycle);
         System.out.println("count : " + count);
 
-        File dir = new File("/root/Temp/" + ws + "");
+        File dir = new File(constants.Constants.PATH + ws + "");
         String[] children = dir.list();
         int f = 0;
         if (children != null) {

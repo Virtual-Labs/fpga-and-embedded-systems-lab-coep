@@ -5,7 +5,7 @@ String ws=(String)session.getAttribute("workspace");
 try{
   // Open the file that is the first 
   // command line parameter
-  FileInputStream fstream = new FileInputStream("/root/Temp/27/test.vcd");
+  FileInputStream fstream = new FileInputStream(constants.Constants.PATH+"27/test.vcd");
   // Get the object of DataInputStream
   DataInputStream in = new DataInputStream(fstream);
   BufferedReader br = new BufferedReader(new InputStreamReader(in));

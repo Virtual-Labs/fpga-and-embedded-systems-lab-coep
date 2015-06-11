@@ -35,7 +35,7 @@ System.out.print("dsfssssssffffffffffffffffffffffffffffffffffffffffffddddddddddd
        String ws=(String)session.getAttribute("workspace");
     if(ws!=null){
        OutputStream o = response.getOutputStream();
-    InputStream is = new FileInputStream(new File("/root/Temp/"+ws+"/saved.jpeg"));
+    InputStream is = new FileInputStream(new File(constants.Constants.PATH+ws+"/saved.jpeg"));
     byte[] buf = new byte[32 * 1024];
     int nRead = 0;
     while( (nRead=is.read(buf)) != -1 ) {

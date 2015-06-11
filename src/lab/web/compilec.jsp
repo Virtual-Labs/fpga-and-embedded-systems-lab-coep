@@ -21,10 +21,10 @@
         String[] compile = new String[2];
         compile[0] = "cc";
 
-        compile[1] = "/root/Temp/" + ws + "/" + fname + ".c";
+        compile[1] = constants.Constants.PATH + ws + "/" + fname + ".c";
 
         //System.out.println(command);*/
-        p = Runtime.getRuntime().exec(compile, null, new File("/root/Temp/" + ws));
+        p = Runtime.getRuntime().exec(compile, null, new File(constants.Constants.PATH + ws));
         BufferedReader br = new BufferedReader(new InputStreamReader(p.getErrorStream()));
         String line = "";
         //OutputStream os=new FileOutputStream("/home/pranav/Desktop/om/Report.txt");

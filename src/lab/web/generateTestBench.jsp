@@ -70,7 +70,7 @@ out.print(tbstring);
 String ws=(String)session.getAttribute("workspace");
 String fname=(String)session.getAttribute("FileName");
 try{
-OutputStream os=new FileOutputStream("/root/Temp/"+ws+"/testbench.vl");
+OutputStream os=new FileOutputStream(constants.Constants.PATH+ws+"/testbench.vl");
 int i=0;
 while(i<tbstring.length()){
 os.write(tbstring.charAt(i));i++;}

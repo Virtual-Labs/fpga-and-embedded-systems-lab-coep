@@ -88,8 +88,8 @@ if(ws!=null){
                     
                     for(int j=0;j<p.length;j++){
                     if(p[j].contains(temp))
-                    out.print("<option value=\"/root/Temp/"+ws+"/"+p[j]+"\">"+p[j]+"</option>");
-
+                   // out.print("<option value=\"/root/Temp/"+ws+"/"+p[j]+"\">"+p[j]+"</option>");
+                    out.print("<option value=\""+constants.Constants.PATH +""+ws+"/"+p[j]+"\">"+p[j]+"</option>");
                     }
                     }%>
         </select></td>

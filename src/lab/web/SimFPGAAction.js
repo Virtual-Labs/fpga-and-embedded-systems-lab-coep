@@ -234,7 +234,7 @@ function callExecute()
 }
 function callRefresh()
 {
-    //alert("Hi.....");
+    alert("Hi.....");
     //document.getElementById('output').innerHTML="Session refreshed.";
     document.F1.program.value="";
     editAreaLoader.setValue("prog", "");

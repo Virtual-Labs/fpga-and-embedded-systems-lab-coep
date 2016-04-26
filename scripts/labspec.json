@@ -68,7 +68,7 @@
                             	"sudo apt-get install -y tomcat7",
                             	"sudo apt-get install -y tomcat7-admin",
 				"sudo apt-get install -y mysql-server",
-				"sudo apt-get install -y iverilog-0.9.7-1",
+				"sudo apt-get install -y iverilog-0.9.7",
 				"sudo apt-get install -y gtkwave"
 		], 
                 "lab_actions": {

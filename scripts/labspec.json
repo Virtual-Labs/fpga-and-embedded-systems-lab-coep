@@ -63,7 +63,7 @@
             "platform": {
                 "arch": "i386", 
                 "hosting": "dedicated", 
-                "installer": [echo "deb http://ftp.iitm.ac.in/ubuntu/ precise main universe" >> /etc/apt/sources.list,
+                "installer": ["echo 'deb http://ftp.iitm.ac.in/ubuntu/ precise main universe' >> /etc/apt/sources.list",
                 		"sudo apt-get update",
 				"sudo apt-get install -y openjdk-7-jdk",
                             	"sudo apt-get install -y tomcat7",
